@@ -1,5 +1,7 @@
 $basic-gray: #707070;
-
+*{
+	// outline: 1px solid #f00;
+}
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,700&display=swap');
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block; } body {line-height: 1; } ol, ul {list-style: none; } blockquote, q {quotes: none; } blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none; } table {border-collapse: collapse; border-spacing: 0; }
 html, body, table, th, td{
@@ -153,6 +155,8 @@ picture img{
 			overflow: hidden;
 			margin-right: -50%;
 			z-index: 1;
+			padding-left: 2em;
+			box-sizing: border-box;
 		}
 	}
 	picture{
@@ -176,6 +180,11 @@ picture img{
 	}
 	.sec-focus{
 		font-size: 1.5rem;
+		@media screen and (max-width:767px){
+			span{
+				display: block;
+			}
+		}
 		@media screen and (min-width:768px){
 			font-size: 1.8rem;
 		}
@@ -300,7 +309,7 @@ picture img{
 		width: 100%;
 		display: flex;
 		flex-flow: wrap;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
 
 		@media screen and (min-width:768px){
@@ -325,7 +334,7 @@ picture img{
 			margin-bottom: 1em;
 		}
 		@media screen and (min-width:768px){
-			width: 40%;
+			width: 30%;
 		}
 
 		p{
@@ -363,9 +372,14 @@ picture img{
 		}
 	}
 	picture{
+		filter:  grayscale(.7);
+		transition: filter .3s;
 		@media screen and (min-width:768px){
 			width: 50%;
 			margin: 0 15px;
+		}
+		&:hover{
+			filter:  grayscale(0);
 		}
 	}
 	.txt{
@@ -382,9 +396,10 @@ picture img{
 			font-size: 1rem;
 			margin-bottom: .4em;
 		}
-		p{
+		.item-section{
 			margin-bottom: 2em;
 			padding-left: 1em;
+			line-height: 1.5;
 		}
 		.building-name,
 		.traffic{
