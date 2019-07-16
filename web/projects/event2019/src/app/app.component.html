@@ -1,20 +1,202 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<header class="main-header">
+  <input type="checkbox" id="menu-control">
+  <div class="container">
+    <h1 class="logo">
+      <a href="index.html">
+        <picture>
+          <source srcset="img/logo-bear-70.webp" media="(min-width: 768px)">
+          <source srcset="img/logo-bear.png">
+          <img src="img/logo-bear.png" />
+        </picture>
+      </a>
+      <label for="menu-control" class="hb">
+        <span class="sr-only">選單開關</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </h1>
 
+    <nav class="main-nav">
+      <a href="#">Agenda</a>
+      <a href="#">Speaker</a>
+      <a href="#">Venue</a>
+    </nav>
+  </div>
+</header>
+
+
+
+
+<section class="section-kv">
+  <div class="container">
+    <div class="kv-txt">
+      <h1>ANGULAR <small>'19</small></h1>
+      <p class="sec-focus"><span>技術在我們手上 </span><span> 世界就在我們手上</span></p>
+      <p class="kv-location">礁溪老爺酒店 11/2 - 3, 2019</p>
+    </div>
+    <picture>
+      <source srcset="img/kv-bear-24-80.webp" media="(min-width: 768px)">
+      <source srcset="img/kv-bear-24.png">
+      <img src="img/kv-bear-24.png" />
+    </picture>
+  </div>
+</section>
+
+
+
+
+<section class="section-itinerary">
+  <div class="container">
+    <div class="main-title">
+      <h2>行程</h2>
+    </div>
+    <div class="content">
+      <div class="item">
+        <h3>Workshop</h3>
+        <picture>
+          <source srcset="img/bear-book-24-70.webp" media="(min-width: 768px)">
+          <source srcset="img/bear-book-24.png">
+          <img src="img/bear-book-24.png" />
+        </picture>
+        <time>11月2日</time>
+        <p>透過手把手的 Workshop 可以讓你在短時間內得到意想不到的成果</p>
+      </div>
+      <div class="item">
+        <h3>Presentations</h3>
+        <picture>
+          <source srcset="img/bear-event-24-70.webp" media="(min-width: 768px)">
+          <source srcset="img/bear-event-24.png">
+          <img src="img/bear-event-24.png" />
+        </picture>
+        <time>11月3日</time>
+        <p>學習最新的 Angular 與前端技術，吸收他人在實務上的踩雷經驗，我們安排足夠的時間讓你能與講者和其它與會者，進行更進一步的交流討論</p>
+      </div>
+      <div class="item">
+        <h3>After party</h3>
+        <picture>
+          <source srcset="img/bear-after-party-24-70.webp" media="(min-width: 768px)">
+          <source srcset="img/bear-after-party-24.png">
+          <img src="img/bear-after-party-24.png" />
+        </picture>
+        <time>11月2日</time>
+        <p>經過一個下午的高密度強迫成長後，當然需要好好的放鬆一下，才能迎接隔日更精彩的議程內容</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section-ticket">
+  <div class="container">
+    <div class="group">
+      <div class="main-title">
+        <h2>Ticket Price</h2>
+        <p>$4, 200 / 人</p>
+        <p>兩天活動，含活動間的三次茶點與第二天的午餐</p>
+      </div>
+      <div class="content">
+        <picture>
+          <source srcset="img/bear-book-24-70.webp" media="(min-width: 768px)">
+          <source srcset="img/bear-book-24.png">
+          <img src="img/bear-book-24.png" />
+        </picture>
+        <div class="more">
+          <a href="#"></a>
+        </div>
+      </div>
+    </div>
+    <picture>
+      <source srcset="img/ticket-cur.svg" media="(min-width: 768px)">
+      <source srcset="img/ticket-cur.svg">
+      <img src="img/ticket-cur.svg" />
+    </picture>
+  </div>
+</section>
+
+
+
+
+<section class="section-venue">
+  <div class="container">
+    <div class="main-title">
+      <h2>
+        Conference Venue
+      </h2>
+    </div>
+    <div class="content">
+      <a href="https://goo.gl/maps/EzT5YRTXtJD3rYEu9" target="_blank">
+        <picture>
+          <source srcset="img/map.png" media="(min-width: 768px)">
+          <source srcset="img/map.png">
+          <img src="img/map.png" />
+        </picture>
+      </a>
+      <div class="txt">
+        <div class="item-group">
+          <h3>位置</h3>
+          <span class="building-name">宜蘭礁溪老爺飯店</span>
+          <address class="address">台灣宜蘭礁溪鄉大忠村五峰路69號</address>
+        </div>
+        <div class="item-group">
+          <h3>交通</h3>
+          <section>
+            <span class="traffic">自行開車</span>
+            <span>經由蘇花公路抵達礁溪後往五峰旗風景區方向約五分鐘即可到達</span>
+          </section>
+          <section>
+            <span class="traffic">大眾交通</span>
+            <ul>
+              <li>首都客運1572路線：台北市(市府轉運站)→礁溪轉運站</li>
+              <li>葛瑪蘭客運1915路線：台北市(台北國道客運轉運站)→礁溪轉運站</li>
+              <li>國光客運1881路線：台北市(圓山轉運站-玉門)→礁溪轉運站</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<footer class="main-footer">
+  <h2>聯絡大會</h2>
+  <div class="container">
+    <picture>
+      <source srcset="img/logo-bear-70.webp" media="(min-width: 768px)">
+      <source srcset="img/logo-bear.png">
+      <img src="img/logo-bear.png" />
+    </picture>
+    <div class="footer-txt">
+      <!-- <p>
+        關注大會動態
+        <span class="social-media">
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="ig"><i class="fa fa-instagram"></i></a>
+          <a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a>
+        </span>
+      </!-->
+      <p>聯絡大會 contact@angular.tw</p>
+      <p>行為準則. 我們依從大會行為準則，以確保所有與會者都能在大會活動期間受到應有的尊重。 <span class="copyright">All Rights Reserved ©
+          2019</span></p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+<a class="backTop">
+  <picture>
+    <source srcset="img/backTotop-24-70.webp" media="(min-width: 768px)">
+    <source srcset="img/backTotop-24.png">
+    <img src="img/backTotop-24.png" />
+  </picture>
+</a>

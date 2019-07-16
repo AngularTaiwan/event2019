@@ -21,9 +21,13 @@
             "aot": false,
             "assets": [
               "projects/event2019/src/favicon.ico",
-              "projects/event2019/src/assets"
+              "projects/event2019/src/assets",
+              "projects/event2019/src/img"
             ],
-            "styles": ["projects/event2019/src/styles.css"],
+            "styles": [
+              "projects/event2019/src/styles.css",
+              "projects/event2019/src/all.scss"
+            ],
             "scripts": []
           },
           "configurations": {
