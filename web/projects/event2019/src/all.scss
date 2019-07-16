@@ -120,7 +120,7 @@ picture img{
 // --------------------------
 .section-kv{
 	position: relative;
-	height: calc(100vh - 200px);
+	min-height: calc(100vh - 200px);
 	background: url("img/kv-circle.svg") no-repeat center bottom / cover;
 	@media screen and (min-width:768px){
 		display: flex;
@@ -136,12 +136,13 @@ picture img{
 	}
 	.kv-txt{
 		@media screen and (max-width:767px){
-			position: absolute;
+			// position: absolute;
 			width: 100%;
 			height: 100%;
 			display: flex;
 			flex-flow:column;
 			justify-content: flex-end;
+			order: 1;
 			text-align: center;
 			text-shadow: 1px 1px 1px #fff,
 						 -1px -1px 1px #fff,
@@ -215,6 +216,17 @@ picture img{
 			top: -.1em;
 			left: 2px;
 		}
+	}
+
+	.btn-buy{
+		text-decoration: none;
+		font-size: 30px;
+		display: inline-block;
+		padding: 10px 30px;
+		border:2px solid #f00;
+		border-radius: 4px;
+		color: #f00;
+		margin-top: 0.5em;
 	}
 }
 
