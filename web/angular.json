@@ -22,7 +22,8 @@
             "assets": [
               "projects/event2019/src/favicon.ico",
               "projects/event2019/src/assets",
-              "projects/event2019/src/img"
+              "projects/event2019/src/img",
+              "projects/event2019/src/robots.txt"
             ],
             "styles": [
               "projects/event2019/src/styles.css",
@@ -36,6 +37,10 @@
                 {
                   "replace": "projects/event2019/src/environments/environment.ts",
                   "with": "projects/event2019/src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "projects/event2019/src/robots.txt",
+                  "with": "projects/event2019/src/robots.prod.txt"
                 }
               ],
               "optimization": true,

@@ -1,26 +1,19 @@
 <header class="main-header">
-  <input type="checkbox" id="menu-control">
   <div class="container">
     <h1 class="logo">
-      <a href="index.html">
+      <a href="/" aria-label="go to homepage">
         <picture>
-          <source srcset="img/logo-bear-70.webp" media="(min-width: 768px)">
-          <source srcset="img/logo-bear.png">
-          <img src="img/logo-bear.png" />
+          <source srcset="img/logo-bear-70.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/logo-bear.png" type="image/png">
+          <img src="img/logo-bear.png" alt="logo" />
         </picture>
       </a>
-      <label for="menu-control" class="hb">
-        <span class="sr-only">選單開關</span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
     </h1>
 
     <nav class="main-nav">
-      <a href="#">議程</a>
-      <a href="#">講者</a>
-      <a href="#">會場</a>
+      <a href="#" aria-label="go to agenda page">議程</a>
+      <a href="#" aria-label="go to speaker page">講者</a>
+      <a href="#" aria-label="go to venue page">會場</a>
     </nav>
   </div>
 </header>
@@ -34,12 +27,13 @@
       <h1>ANGULAR <small>'19</small></h1>
       <p class="sec-focus"><span>技術在我們手上 </span><span> 世界就在我們手上</span></p>
       <p class="kv-location">礁溪老爺酒店 11/2 - 3, 2019</p>
-      <p><a class="btn-buy" href="https://www.accupass.com/go/ngtw2019" target="_blank">購票去</a></p>
+      <p><a class="btn-buy" href="https://www.accupass.com/go/ngtw2019" target="_blank"
+           aria-label="go to ticket purchase website" rel="noopener">購票去</a></p>
     </div>
     <picture>
-      <source srcset="img/kv-bear-24-80.webp" media="(min-width: 768px)">
-      <source srcset="img/kv-bear-24.png">
-      <img src="img/kv-bear-24.png" />
+      <source srcset="img/kv-bear-24-80.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="img/kv-bear-24.png" type="image/png">
+      <img src="img/kv-bear-24.png" alt="banner image" />
     </picture>
   </div>
 </section>
@@ -56,31 +50,32 @@
       <div class="item">
         <h3>工作坊</h3>
         <picture>
-          <source srcset="img/bear-book-24-70.webp" media="(min-width: 768px)">
-          <source srcset="img/bear-book-24.png">
-          <img src="img/bear-book-24.png" />
+          <source srcset="img/bear-book-24-70.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/bear-book-24.png" type="image/png">
+          <img src="img/bear-book-24.png" alt="workshop" />
         </picture>
-        <time>11月2日</time>
+        <time datetime="2019-11-02T12:00">11月2日</time>
         <p>透過手把手的 Workshop 可以讓你在短時間內得到意想不到的成果</p>
       </div>
       <div class="item">
         <h3>議程</h3>
         <picture>
-          <source srcset="img/bear-event-24-70.webp" media="(min-width: 768px)">
-          <source srcset="img/bear-event-24.png">
-          <img src="img/bear-event-24.png" />
+          <source srcset="img/bear-event-24-70.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/bear-event-24.png" type="image/png">
+          <img src="img/bear-event-24.png" alt="presentation" />
         </picture>
-        <time>11月3日</time>
+        <time datetime="2019-11-03T09:00">11月3日</time>
         <p>學習最新的 Angular 與前端技術，吸收他人在實務上的踩雷經驗，我們安排足夠的時間讓你能與講者和其它與會者，進行更進一步的交流討論</p>
       </div>
       <div class="item">
-        <h3>After party</h3>
+        <h3>After Party</h3>
         <picture>
-          <source srcset="img/bear-after-party-24-70.webp" media="(min-width: 768px)">
-          <source srcset="img/bear-after-party-24.png">
-          <img src="img/bear-after-party-24.png" />
+          <source srcset="img/bear-after-party-24-70.webp" media="(min-width: 768px)"
+                  type="image/webp">
+          <source srcset="img/bear-after-party-24.png" type="image/png">
+          <img src="img/bear-after-party-24.png" alt="After Party" />
         </picture>
-        <time>11月2日</time>
+        <time datetime="2019-11-02T18:00">11月2日</time>
         <p>經過一個下午的高密度強迫成長後，當然需要好好的放鬆一下，才能迎接隔日更精彩的議程內容</p>
       </div>
     </div>
@@ -100,19 +95,19 @@
       </div>
       <div class="content">
         <picture>
-          <source srcset="img/bear-book-24-70.webp" media="(min-width: 768px)">
-          <source srcset="img/bear-book-24.png">
-          <img src="img/bear-book-24.png" />
+          <source srcset="img/bear-book-24-70.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/bear-book-24.png" type="image/png">
+          <img src="img/bear-book-24.png" alt="Ticket price" />
         </picture>
-        <div class="more">
+        <!-- <div class="more">
           <a href="#"></a>
-        </div>
+        </div> -->
       </div>
     </div>
     <picture>
-      <source srcset="img/ticket-cur.svg" media="(min-width: 768px)">
-      <source srcset="img/ticket-cur.svg">
-      <img src="img/ticket-cur.svg" />
+      <source srcset="img/ticket-cur.svg" media="(min-width: 768px)" type="image/svg+xml">
+      <source srcset="img/ticket-cur.svg" type="image/svg+xml">
+      <img src="img/ticket-cur.svg" alt="ticket-background" />
     </picture>
   </div>
 </section>
@@ -129,10 +124,11 @@
     </div>
     <div class="content">
       <picture>
-        <a href="https://goo.gl/maps/EzT5YRTXtJD3rYEu9" target="_blank">
-          <source srcset="img/map.png" media="(min-width: 768px)">
-          <source srcset="img/map.png">
-          <img src="img/map.png" />
+        <a href="https://goo.gl/maps/EzT5YRTXtJD3rYEu9" target="_blank"
+           aria-label="go to google map" rel="noopener">
+          <source srcset="img/map.png" media="(min-width: 768px)" type="image/png">
+          <source srcset="img/map.png" type="image/png">
+          <img src="img/map.png" alt="map" />
         </a>
       </picture>
       <div class="txt">
@@ -171,9 +167,9 @@
   <h2>聯絡大會</h2>
   <div class="container">
     <picture>
-      <source srcset="img/logo-bear-70.webp" media="(min-width: 768px)">
-      <source srcset="img/logo-bear.png">
-      <img src="img/logo-bear.png" />
+      <source srcset="img/logo-bear-70.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="img/logo-bear.png" type="image/png">
+      <img src="img/logo-bear.png" alt="footer background" />
     </picture>
     <div class="footer-txt">
       <!-- <p>
@@ -198,8 +194,8 @@
 
 <a class="backTop">
   <picture>
-    <source srcset="img/backTotop-24-70.webp" media="(min-width: 768px)">
-    <source srcset="img/backTotop-24.png">
-    <img src="img/backTotop-24.png" />
+    <source srcset="img/backTotop-24-70.webp" media="(min-width: 768px)" type="image/webp">
+    <source srcset="img/backTotop-24.png" type="image/png">
+    <img src="img/backTotop-24.png" alt="back to top" />
   </picture>
 </a>
