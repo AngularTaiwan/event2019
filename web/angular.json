@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "event2019"
+  "defaultProject": "event2019",
+  "schematics": {
+    "@schematics/angular:component": { "spec": false }
+  }
 }

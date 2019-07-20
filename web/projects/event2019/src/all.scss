@@ -577,10 +577,12 @@ picture img {
   p {
     padding: 0.3em;
   }
-  .mail {
+
+  .link {
     color: #fff;
     text-decoration: none;
   }
+
   .copyright {
     display: block;
     @media screen and (min-width: 768px) {
@@ -602,60 +604,60 @@ picture img {
   }
 }
 
-
-
-
-
 // --------------------------
-.coc{
-  background-image: linear-gradient(0deg,#ecf1f2 0%, rgba(236,241,242,0) 200px);
+.coc {
+  background-image: linear-gradient(
+    0deg,
+    #ecf1f2 0%,
+    rgba(236, 241, 242, 0) 200px
+  );
 }
-.coc-text{
+.coc-text {
   max-width: 960px;
   margin: auto;
 }
-.coc h1{
+.coc h1 {
   font-size: 32px;
   border-bottom: 1px solid #ccc;
-  padding-bottom: .3em;
+  padding-bottom: 0.3em;
   margin-bottom: 1em;
   font-weight: 900;
 }
-.coc h2{
+.coc h2 {
   font-size: 24px;
   font-weight: 900;
   margin-top: 1.2em;
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
 }
-.coc h3{
+.coc h3 {
   font-size: 20px;
   font-weight: 900;
   margin-top: 1.2em;
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
 }
-.coc p{
+.coc p {
   margin-bottom: 1.8em;
 }
-.coc ol{
+.coc ol {
   list-style-type: decimal;
-  margin-left: .4em;
+  margin-left: 0.4em;
   padding-left: 1em;
   margin-bottom: 1em;
 }
-.coc ul{
+.coc ul {
   list-style-type: disc;
-  margin-left: .4em;
+  margin-left: 0.4em;
   padding-left: 1em;
   margin-bottom: 1.8em;
 }
-.coc li{
+.coc li {
   line-height: 1.6;
 }
-.coc .signature{
+.coc .signature {
   text-align: right;
   padding-top: 2em;
 }
-.coc .signature:before{
+.coc .signature:before {
   content: '-';
-  padding-right: .5em;
+  padding-right: 0.5em;
 }
