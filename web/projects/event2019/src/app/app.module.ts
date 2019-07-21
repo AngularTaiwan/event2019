@@ -19,7 +19,9 @@ const routes: Routes = [
   declarations: [AppComponent, CocComponent, MainComponent],
   imports: [
     BrowserModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production
+    }),
     RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })
   ],
   providers: [],
