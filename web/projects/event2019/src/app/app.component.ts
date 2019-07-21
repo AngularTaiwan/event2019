@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CheckForUpdateService } from './services/check-for-update.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'event2019';
+
+  constructor(check: CheckForUpdateService) {
+    check.registe();
+  }
 }
