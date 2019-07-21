@@ -23,7 +23,8 @@
               "projects/event2019/src/favicon.ico",
               "projects/event2019/src/assets",
               "projects/event2019/src/img",
-              "projects/event2019/src/robots.txt"
+              "projects/event2019/src/robots.txt",
+              "projects/event2019/src/manifest.webmanifest"
             ],
             "styles": [
               "projects/event2019/src/styles.css",
@@ -58,7 +59,9 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "projects/event2019/ngsw-config.json"
             }
           }
         },
@@ -88,7 +91,8 @@
             "karmaConfig": "projects/event2019/karma.conf.js",
             "assets": [
               "projects/event2019/src/favicon.ico",
-              "projects/event2019/src/assets"
+              "projects/event2019/src/assets",
+              "projects/event2019/src/manifest.webmanifest"
             ],
             "styles": ["projects/event2019/src/styles.css"],
             "scripts": []
