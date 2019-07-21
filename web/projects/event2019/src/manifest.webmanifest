@@ -1,9 +1,9 @@
 {
-  "name": "event2019",
-  "short_name": "event2019",
+  "name": "NGTW2019",
+  "short_name": "NGTW2019",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
-  "display": "standalone",
+  "display": "fullscreen",
   "scope": "/",
   "start_url": "/",
   "icons": [
