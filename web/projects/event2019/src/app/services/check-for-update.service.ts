@@ -1,12 +1,13 @@
 import { Injectable, ApplicationRef } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
-import { interval, concat } from 'rxjs';
-import { first } from 'rxjs/operators';
+import { interval, concat, Subject } from 'rxjs';
+import { first, takeUntil } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CheckForUpdateService {
+  destory$ = new Subject();
 
   constructor(private appRef: ApplicationRef, private updates: SwUpdate) {
   }
@@ -15,7 +16,9 @@ export class CheckForUpdateService {
     // Allow the app to stabilize first, before starting polling for updates with `interval()`.
     const appIsStable$ = this.appRef.isStable.pipe(first(isStable => isStable === true));
     const everySixHours$ = interval(6 * 60 * 60 * 1000);
-    const everySixHoursOnceAppIsStable$ = concat(appIsStable$, everySixHours$);
+    const everySixHoursOnceAppIsStable$ = concat(appIsStable$, everySixHours$).pipe(
+      takeUntil(this.destory$),
+    );
 
     everySixHoursOnceAppIsStable$.subscribe(() => {
       this.updates.checkForUpdate();
@@ -28,5 +31,10 @@ export class CheckForUpdateService {
     this.updates.available.subscribe(() => {
       window.location.reload();
     });
+  }
+
+  unregiste() {
+    this.destory$.next();
+    this.destory$.complete();
   }
 }
