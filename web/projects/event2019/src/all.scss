@@ -251,6 +251,11 @@ picture img {
     height: 100vh;
     padding: 0;
   }
+  &.kv-sec{
+    @media screen and (max-width:767px){
+      margin-bottom: 100px;
+    }
+  }
   .container {
     @media screen and (min-width: 768px) {
       align-items: center;
@@ -660,4 +665,212 @@ picture img {
 .coc .signature:before {
   content: '-';
   padding-right: 0.5em;
+}
+//------------------
+.agenda{
+  background-image: linear-gradient(
+    0deg,
+    #ecf1f2 0%,
+    rgba(236, 241, 242, 0) 200px
+  );
+}
+.tab-group{
+  position: relative;
+  margin: auto auto 50px;
+  @media screen and (min-width:768px){
+    margin: auto auto 80px;
+  }
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 22px;
+    height: 8px;
+    background-color: $basic-gray;
+    width: 90%;
+    left: 5%;
+  }
+  .bear-see{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: -36px;
+    width: 70px;
+    height: 100px;
+    background: url(img/bear-see.png) 0px 0px / auto 100%;
+    transition: none;
+    @media screen and (min-width:768px){
+      bottom: -50px;
+      width: 100px;
+      height: 140px;
+    }
+  }
+  a:first-of-type.active ~ .bear-see{
+    left: 78px;
+    @media screen and (min-width:768px){
+      left: 80px;
+    }
+  }
+  a:last-of-type.active ~ .bear-see{
+    left: 140px;
+    transform: scaleX(-1);
+    @media screen and (min-width:768px){
+      left: 200px;
+    }
+  }
+  @media screen and (min-width:1200px){
+    a:not(.active):hover ~ .bear-see{
+      background-position: -100px bottom;
+    }
+  }
+  a{
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    position: relative;
+    background: #f3a406;
+  }
+  a.active{
+    background: #f4511e;
+  }
+  a:last-of-type{
+    margin-left: 80px;
+    @media screen and (min-width:768px){
+      margin-left: 170px;
+    }
+  }
+  
+}
+.agenda-text{
+  h1{
+    font-size: 2.6rem;
+    text-align: center;
+    @media screen and (max-width:767px){
+      margin-bottom: 1rem;
+    }
+  }
+}
+.agenda-section{
+  align-items: center;
+  position: relative;
+  padding: 40px 0;
+  @media screen and (min-width:768px){
+    display: flex;
+    &::before,
+    &::after{
+      background-color: $basic-gray;
+      content: '';
+      position: absolute;
+      left: 20%;
+    }
+    &::before{
+      width: 1px;
+      height: 100%;
+      top: 0;
+    }
+
+    &::after{
+      width: 10%;
+      height: 1px;
+      top: 50%;
+    }
+    &:first-child::before{
+      height: 50%;
+      top: 50%;
+    }
+    &:last-child::before{
+      height: 50%;
+    }
+  }
+}
+.agenda-section time{
+  @media screen and (max-width:767px){
+    position: absolute;
+    top: 0;
+  }
+  @media screen and (min-width:768px){
+    order: -1;
+    width: 15%;
+    text-align: center;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      z-index: 5;
+      background-color: $basic-gray;
+      transform: translate(-50%,-50%);
+    }
+  }
+}
+.agenda-section .speaker{
+  font-size: 1.5rem;
+  
+  @media screen and (min-width:768px){
+    position: absolute;
+    width: 20%;
+    right: 0;
+    top: 0;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before{
+      content: ''; 
+      background-color: #fe9641;
+      position: absolute;
+      left: 0;
+      height: 150%;
+      width: 150%;
+      border-radius: 50%;
+    }
+  }
+  span{
+    position: relative;
+    z-index: 1;
+    &::after{
+      content: '';
+      display: block;
+      width: 3rem;
+      height: 1px;
+      background-color: #fff;
+      margin: .9em auto 0;
+    }
+  }
+}
+.agenda-list-content{
+  padding: 20px;
+  margin-left: auto;
+  color: $basic-gray;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+  @media screen and (min-width:768px){
+    border-radius: 30px;
+    position: relative;
+    z-index: 2;
+    width: 70%;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  h2,p{
+    margin-right: 21%;
+  }
+  h2{
+    margin-bottom: .6em;
+    font-size: 1.5rem;
+  }
+}
+.for-time .agenda-list-content h2{
+  margin-bottom: 0;
+}
+.for-time .agenda-list-content{
+  @media screen and (min-width:768px){
+    box-shadow: none;
+  }
 }
