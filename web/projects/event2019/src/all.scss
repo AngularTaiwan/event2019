@@ -62,6 +62,7 @@ picture img {
   top: 0;
   z-index: 10;
   background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.5), #fff);
+
   @include for-tablet-portrait-down {
     position: fixed;
     width: 100%;
@@ -74,9 +75,11 @@ picture img {
 
 .logo {
   display: flex;
+
   @include for-tablet-portrait-down {
     align-items: center;
   }
+
   @include for-tablet-portrait-up {
     width: 120px;
   }
@@ -85,6 +88,7 @@ picture img {
     display: block;
     width: 60px;
     padding: 6px 0;
+
     @include for-tablet-portrait-up {
       width: 100%;
     }
@@ -98,6 +102,7 @@ picture img {
   height: 36px;
   background-color: #000;
   margin-left: auto;
+
   @include for-tablet-portrait-up {
     display: none;
   }
@@ -107,6 +112,7 @@ picture img {
   display: flex;
   justify-content: flex-end;
   flex: 1 0 0px;
+
   @include for-tablet-portrait-down {
     // flex-flow: column;
     // position: absolute;
@@ -118,6 +124,7 @@ picture img {
     color: #000;
     text-decoration: none;
     font-size: 28px;
+
     @include for-tablet-portrait-down {
       font-size: 18px;
     }
@@ -129,13 +136,15 @@ picture img {
   position: relative;
   min-height: calc(100vh - 200px);
   background: url('img/kv-circle.svg') no-repeat center bottom / cover;
+
   @include for-tablet-portrait-up {
     display: flex;
     align-items: center;
     height: 100vh;
     padding: 0;
   }
-  &.kv-sec{
+
+  &.kv-sec {
     @include for-tablet-portrait-down {
       margin-bottom: 100px;
     }
@@ -161,6 +170,7 @@ picture img {
       text-shadow: 1px 1px 1px #fff, -1px -1px 1px #fff, 1px -1px 1px #fff,
         -1px 1px 1px #fff, 0px 0px 6px #fff;
     }
+
     @include for-tablet-portrait-up {
       width: 100%;
       flex: 0 0 100%;
@@ -170,9 +180,10 @@ picture img {
       padding-left: 2em;
       box-sizing: border-box;
     }
+
     @include for-drak-mode {
-        color: $dark-fc;
-        text-shadow: none;
+      color: $dark-fc;
+      text-shadow: none;
     }
   }
 
@@ -186,9 +197,11 @@ picture img {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0.3em;
+
     @include for-tablet-portrait-up {
       font-size: 4.5rem;
     }
+
     @include for-tablet-up {
       font-size: 8.4375rem;
     }
@@ -200,14 +213,17 @@ picture img {
 
   .sec-focus {
     font-size: 1.5rem;
+
     @include for-tablet-portrait-down {
       span {
         display: block;
       }
     }
+
     @include for-tablet-portrait-up {
       font-size: 1.8rem;
     }
+
     @include for-tablet-up {
       font-size: 3rem;
     }
@@ -217,9 +233,11 @@ picture img {
     font-size: 1.4rem;
     color: #f00;
     font-weight: 700;
+
     @include for-tablet-portrait-up {
       font-size: 1.6rem;
     }
+
     @include for-tablet-up {
       font-size: 2.375rem;
     }
@@ -265,6 +283,7 @@ picture img {
 
   .content {
     display: flex;
+
     @include for-tablet-portrait-down {
       flex-flow: wrap;
     }
@@ -289,9 +308,11 @@ picture img {
     text-align: center;
     flex-flow: column;
     color: $basic-gray;
+
     @include for-tablet-portrait-down {
       width: 100%;
     }
+
     @include for-tablet-portrait-up {
       flex: 1 0 0px;
     }
@@ -312,11 +333,13 @@ picture img {
       font-size: 1.5rem;
       font-weight: 700;
       margin: 0.8em 0;
+
       @include for-drak-mode {
         color: $dark-fc;
       }
     }
-    p{
+
+    p {
       @include for-drak-mode {
         color: #ddd;
       }
@@ -335,6 +358,7 @@ picture img {
   align-items: center;
   min-height: 60vh;
   padding: 40px 0 100px;
+
   @include for-tablet-portrait-up {
     background: url('img/ticket-cur-bg.svg') no-repeat center center / 100% auto;
   }
@@ -345,6 +369,7 @@ picture img {
 
   .container>picture {
     width: 100%;
+
     @include for-tablet-portrait-down {
       position: absolute;
       z-index: -1;
@@ -386,6 +411,7 @@ picture img {
     h2 {
       margin-bottom: 1em;
     }
+
     @include for-tablet-portrait-up {
       width: 30%;
     }
@@ -411,8 +437,9 @@ picture img {
 
   .container {
     padding: 70px 20px;
-    @include for-tablet-portrait-up{
-      padding: 70px 0;  
+
+    @include for-tablet-portrait-up {
+      padding: 70px 0;
     }
   }
 
@@ -425,6 +452,7 @@ picture img {
     width: 100%;
     display: flex;
     flex-flow: wrap;
+
     @include for-tablet-portrait-up {
       flex-flow: nowrap;
     }
@@ -433,6 +461,7 @@ picture img {
   picture {
     filter: grayscale(0.7);
     transition: filter 0.3s;
+
     @include for-tablet-portrait-up {
       width: 50%;
       margin: 0 15px;
@@ -445,6 +474,7 @@ picture img {
 
   .txt {
     width: 100%;
+
     @include for-tablet-portrait-up {
       width: 50%;
       margin: 0 15px;
@@ -528,6 +558,7 @@ picture img {
 
   .copyright {
     display: block;
+
     @include for-tablet-portrait-up {
       display: inline-block;
     }
@@ -540,6 +571,7 @@ picture img {
   position: fixed;
   right: 10px;
   bottom: 20px;
+
   @include for-tablet-portrait-up {
     width: 128px;
     right: 50px;
@@ -549,12 +581,10 @@ picture img {
 
 // --------------------------
 .coc {
-  background-image: linear-gradient(
-    0deg,
-    #ecf1f2 0%,
-    rgba(236, 241, 242, 0) 200px
-  );
-  
+  background-image: linear-gradient(0deg,
+      #ecf1f2 0%,
+      rgba(236, 241, 242, 0) 200px);
+
   h1 {
     font-size: 32px;
     border-bottom: 1px solid #ccc;
@@ -602,32 +632,40 @@ picture img {
   .signature {
     text-align: right;
     padding-top: 2em;
-    
+
     &::before {
       content: '-';
       padding-right: 0.5em;
     }
   }
-  
+
 }
 
 .coc-text {
   max-width: 960px;
   margin: auto;
 }
+
 //------------------
 .agenda {
   background-image: linear-gradient(0deg,
       #ecf1f2 0%,
       rgba(236, 241, 242, 0) 200px);
 }
-.agenda-list{
+
+.agenda-list {
   width: 100%;
 }
-.tab-group{
+
+.agenda-text {
+  width: 100%;
+}
+
+.tab-group {
   position: relative;
   margin: auto auto 50px;
-  @include for-tablet-portrait-up{
+
+  @include for-tablet-portrait-up {
     margin: auto auto 80px;
   }
 
@@ -651,13 +689,15 @@ picture img {
     height: 100px;
     background: url('./img/bear-see.png') 0px 0px / auto 100%;
     transition: none;
-    @include for-tablet-portrait-up{
+
+    @include for-tablet-portrait-up {
       bottom: -50px;
       width: 100px;
       height: 140px;
     }
   }
-  a{
+
+  a {
     padding: 10px 20px;
     color: #fff;
     text-decoration: none;
@@ -665,34 +705,38 @@ picture img {
     position: relative;
     background: #f3a406;
 
-    &:first-of-type.active ~ .bear-see{
+    &:first-of-type.active~.bear-see {
       left: 78px;
-      @include for-tablet-portrait-up{
+
+      @include for-tablet-portrait-up {
         left: 80px;
       }
     }
-    &:last-of-type{
+
+    &:last-of-type {
       margin-left: 80px;
-      @include for-tablet-portrait-up{
+
+      @include for-tablet-portrait-up {
         margin-left: 170px;
       }
 
-      &.active ~ .bear-see{
+      &.active~.bear-see {
         left: 140px;
         transform: scaleX(-1);
-        @include for-tablet-portrait-up{
+
+        @include for-tablet-portrait-up {
           left: 200px;
         }
       }
     }
-    
-    &.active{
+
+    &.active {
       background: #f4511e;
     }
   }
 
   @include for-desktop-up {
-    a:not(.active):hover ~ .bear-see{
+    a:not(.active):hover~.bear-see {
       background-position: -100px bottom;
     }
   }
@@ -702,6 +746,7 @@ picture img {
   h1 {
     font-size: 2.6rem;
     text-align: center;
+
     @include for-tablet-portrait-down {
       margin-bottom: 1rem;
     }
@@ -712,7 +757,8 @@ picture img {
   align-items: center;
   position: relative;
   padding: 40px 0;
-  @include for-tablet-portrait-up{
+
+  @include for-tablet-portrait-up {
     display: flex;
 
     &::before,
@@ -745,23 +791,27 @@ picture img {
     }
   }
 
-  time{
+  time {
     font-size: 1.375rem;
-    @include for-tablet-portrait-down{
+
+    @include for-tablet-portrait-down {
       position: absolute;
       background-color: #ccc;
       padding: 10px 20px;
       top: 0px;
       left: -10px;
     }
+
     @include for-drak-mode {
-        color: $dark-fc;
+      color: $dark-fc;
     }
-    @include for-tablet-portrait-up{
+
+    @include for-tablet-portrait-up {
       order: -1;
       width: 15%;
       text-align: center;
-      &::before{
+
+      &::before {
         content: '';
         position: absolute;
         top: 50%;
@@ -771,129 +821,134 @@ picture img {
         border-radius: 50%;
         z-index: 5;
         background-color: $basic-gray;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
       }
     }
   }
 }
 
 .for-speaker {
-  time{ 
-    @include for-tablet-portrait-down{
+  time {
+    @include for-tablet-portrait-down {
       background: $bgc-main1;
       color: #fff;
     }
-    &::before{
+
+    &::before {
       background: $bgc-main1;
     }
   }
 
-  .speaker::before{
+  .speaker::before {
     $bgcA: $bgc-main1;
     $bgcB: #fdaa66;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center center;
     background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
-                      linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
-                      linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
-                      linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
+      linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
+      linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
+      linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
     background-color: $bgcA;
   }
 
   &:nth-of-type(2n) {
-    time{ 
-      @include for-tablet-portrait-down{
+    time {
+      @include for-tablet-portrait-down {
         background: $bgc-main2;
         color: #fff;
       }
-      &::before{
+
+      &::before {
         background: $bgc-main2;
       }
     }
 
-    .speaker::before{
+    .speaker::before {
       $bgcA: $bgc-main2;
       $bgcB: #B7E068;
       background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
-                        linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
-                        linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
-                        linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
+        linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
+        linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
+        linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
       background-color: $bgcA;
     }
   }
 
   &:nth-of-type(3n) {
-    time{
-      @include for-tablet-portrait-down{
+    time {
+      @include for-tablet-portrait-down {
         background: $bgc-main3;
         color: #fff;
       }
-      &::before{
+
+      &::before {
         background: $bgc-main3;
       }
     }
 
-    .speaker::before{
+    .speaker::before {
       $bgcA: $bgc-main3;
       $bgcB: #F4D66F;
       background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
-                        linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
-                        linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
-                        linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
+        linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
+        linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
+        linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
       background-color: $bgcA;
     }
   }
 
   &:nth-of-type(4n) {
-    time{ 
-      @include for-tablet-portrait-down{
+    time {
+      @include for-tablet-portrait-down {
         background: $bgc-main4;
         color: #fff;
       }
-      &::before{
+
+      &::before {
         background: $bgc-main4;
       }
     }
 
-    .speaker::before{
+    .speaker::before {
       $bgcA: $bgc-main4;
       $bgcB: #7AD7E0;
       background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
-                        linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
-                        linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
-                        linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
+        linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
+        linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
+        linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
       background-color: $bgcA;
     }
   }
 
   &:nth-of-type(5n) {
-    time{
-      @include for-tablet-portrait-down{
+    time {
+      @include for-tablet-portrait-down {
         background: $bgc-main5;
         color: #fff;
       }
-      &::before{
+
+      &::before {
         background: $bgc-main5;
       }
     }
 
-    .speaker::before{
+    .speaker::before {
       $bgcA: $bgc-main5;
       $bgcB: #9795C7;
       background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
-                        linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
-                        linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
-                        linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
+        linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
+        linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
+        linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
       background-color: $bgcA;
     }
   }
 }
 
-.agenda-section .speaker{
+.agenda-section .speaker {
   font-size: 1.5rem;
 
-  @include for-tablet-portrait-up{
+  @include for-tablet-portrait-up {
     position: absolute;
     width: 20%;
     right: 0;
@@ -934,7 +989,7 @@ picture img {
   color: $basic-gray;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 
-  @include for-tablet-portrait-up{
+  @include for-tablet-portrait-up {
     border-radius: 30px;
     position: relative;
     z-index: 2;
@@ -943,14 +998,16 @@ picture img {
     background-color: #fff;
 
   }
+
   @include for-drak-mode {
     background-color: #666;
     color: $dark-fc;
   }
 
-  h2,p{
-    @include for-tablet-portrait-up{
-      margin-right: 21%;  
+  h2,
+  p {
+    @include for-tablet-portrait-up {
+      margin-right: 21%;
     }
   }
 
@@ -959,13 +1016,14 @@ picture img {
     font-size: 1.5rem;
   }
 }
-.for-time{
-  .agenda-list-content{
-    @include for-tablet-portrait-up{
+
+.for-time {
+  .agenda-list-content {
+    @include for-tablet-portrait-up {
       box-shadow: none;
     }
 
-    h2{
+    h2 {
       margin-bottom: 0;
     }
   }
