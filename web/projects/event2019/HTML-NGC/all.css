@@ -641,12 +641,14 @@ picture img {
       .tab-group a:last-of-type {
         margin-left: 170px; } }
 
-.agenda-text h1 {
-  font-size: 2.6rem;
-  text-align: center; }
-  @media screen and (max-width: 767px) {
-    .agenda-text h1 {
-      margin-bottom: 1rem; } }
+.agenda-text {
+  width: 100%; }
+  .agenda-text h1 {
+    font-size: 2.6rem;
+    text-align: center; }
+    @media screen and (max-width: 767px) {
+      .agenda-text h1 {
+        margin-bottom: 1rem; } }
 
 .agenda-section {
   -webkit-box-align: center;
