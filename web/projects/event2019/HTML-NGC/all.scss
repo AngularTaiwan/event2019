@@ -1,89 +1,10 @@
 $basic-gray: #707070;
+$dark-fc: #fff;
 * {
   // outline: 1px solid #f00;
 }
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,700&display=swap');
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -91,21 +12,14 @@ video {
   font: inherit;
   vertical-align: baseline;
 } /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
   line-height: 1;
+  @media (prefers-color-scheme: dark) {
+      background-color: #333C4B;
+  }
 }
 ol,
 ul {
@@ -115,10 +29,7 @@ blockquote,
 q {
   quotes: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none;
 }
@@ -126,11 +37,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-html,
-body,
-table,
-th,
-td {
+html, body, table, th, td {
   font-family: 'Noto Sans TC', sans-serif;
 }
 .sr-only {
@@ -284,6 +191,10 @@ picture img {
       padding-left: 2em;
       box-sizing: border-box;
     }
+    @media (prefers-color-scheme: dark) {
+        color: $dark-fc;
+        text-shadow: none;
+    }
   }
   picture {
     @media screen and (min-width: 768px) {
@@ -407,6 +318,14 @@ picture img {
       font-size: 1.5rem;
       font-weight: 700;
       margin: 0.8em 0;
+      @media (prefers-color-scheme: dark) {
+        color: $dark-fc;
+      }
+    }
+    p{
+      @media (prefers-color-scheme: dark) {
+        color: #ddd;
+      }
     }
     picture {
       margin-bottom: 10px;
@@ -489,7 +408,10 @@ picture img {
     background: #fff url('img/moon-24.png') center top / cover;
   }
   .container {
-    padding: 70px 0;
+    padding: 70px 20px;
+    @media screen and (min-width:768px){
+      padding: 70px 0;  
+    }
   }
   .main-title {
     margin-bottom: 70px;
@@ -785,9 +707,16 @@ picture img {
   }
 }
 .agenda-section time{
+	font-size: 1.375rem;
   @media screen and (max-width:767px){
     position: absolute;
-    top: 0;
+    background-color: #ccc;
+    padding: 10px 20px;
+    top: 0px;
+    left: -10px;
+  }
+  @media (prefers-color-scheme: dark) {
+      color: $dark-fc;
   }
   @media screen and (min-width:768px){
     order: -1;
@@ -807,9 +736,122 @@ picture img {
     }
   }
 }
+
+//gradient position and angle
+$angle1: -32deg;
+$angle2: -27deg;
+$angle3: -27deg;
+$angle4: -10deg;
+$pos1s: 45%;
+$pos1e: $pos1s + 0.1;
+$pos2s: 47%;
+$pos2e: $pos2s + 0.1;
+$pos3s: 48%;
+$pos3e: $pos3s + 0.1;
+$pos4s: 58%;
+$pos4e: $pos4s + 0.1;
+
+$bgc-main1:#fe9641;
+.for-speaker time{ 
+  @media screen and (max-width:767px){
+    background: $bgc-main1;
+    color: #fff;
+  }
+  &::before{
+    background: $bgc-main1;
+  }
+}
+.for-speaker .speaker::before{
+    $bgcA: $bgc-main1;
+    $bgcB: #fdaa66;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
+                      linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
+                      linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
+                      linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
+    background-color: $bgcA;
+}
+$bgc-main2:#A5D93D;
+.for-speaker:nth-of-type(2n) time{ 
+  @media screen and (max-width:767px){
+    background: $bgc-main2;
+    color: #fff;
+  }
+  &::before{
+    background: $bgc-main2;
+  }
+}
+.for-speaker:nth-of-type(2n) .speaker::before{
+  $bgcA: $bgc-main2;
+  $bgcB: #B7E068;
+  background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
+                    linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
+                    linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
+                    linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
+  background-color: $bgcA;
+}
+$bgc-main3:#f0c53f;
+.for-speaker:nth-of-type(3n) time{
+  @media screen and (max-width:767px){
+    background: $bgc-main3;
+    color: #fff;
+  }
+  &::before{
+    background: $bgc-main3;
+  }
+}
+.for-speaker:nth-of-type(3n) .speaker::before{
+  $bgcA: $bgc-main3;
+  $bgcB: #F4D66F;
+  background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
+                    linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
+                    linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
+                    linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
+  background-color: $bgcA;
+}
+$bgc-main4:#4cc7d4;
+.for-speaker:nth-of-type(4n) time{ 
+  @media screen and (max-width:767px){
+    background: $bgc-main4;
+    color: #fff;
+  }
+  &::before{
+    background: $bgc-main4;
+  }
+}
+.for-speaker:nth-of-type(4n) .speaker::before{
+  $bgcA: $bgc-main4;
+  $bgcB: #7AD7E0;
+  background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
+                    linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
+                    linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
+                    linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
+  background-color: $bgcA;
+}
+$bgc-main5:#706eb1;
+.for-speaker:nth-of-type(5n) time{
+  @media screen and (max-width:767px){
+    background: $bgc-main5;
+    color: #fff;
+  }
+  &::before{
+    background: $bgc-main5;
+  }
+}
+.for-speaker:nth-of-type(5n) .speaker::before{
+  $bgcA: $bgc-main5;
+  $bgcB: #9795C7;
+  background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
+                    linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
+                    linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
+                    linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
+  background-color: $bgcA;
+}
 .agenda-section .speaker{
   font-size: 1.5rem;
-  
+
   @media screen and (min-width:768px){
     position: absolute;
     width: 20%;
@@ -823,17 +865,16 @@ picture img {
 
     &::before{
       content: ''; 
-      background-color: #fe9641;
       position: absolute;
       left: 0;
-      height: 150%;
+      height: 400px;
       width: 150%;
       border-radius: 50%;
     }
   }
   span{
-    position: relative;
-    z-index: 1;
+  	position: relative;
+
     &::after{
       content: '';
       display: block;
@@ -849,6 +890,7 @@ picture img {
   margin-left: auto;
   color: $basic-gray;
   box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+
   @media screen and (min-width:768px){
     border-radius: 30px;
     position: relative;
@@ -856,10 +898,17 @@ picture img {
     width: 70%;
     overflow: hidden;
     background-color: #fff;
+
+  }
+  @media (prefers-color-scheme: dark) {
+    background-color: #666;
+    color: $dark-fc;
   }
 
   h2,p{
-    margin-right: 21%;
+    @media screen and (min-width:768px){
+      margin-right: 21%;  
+    }
   }
   h2{
     margin-bottom: .6em;
