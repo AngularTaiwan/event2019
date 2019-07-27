@@ -1,0 +1,46 @@
+<section class="section-kv kv-sec">
+  <div class="container">
+    <div class="kv-txt">
+      <h1>ANGULAR <small>'19</small></h1>
+      <p class="sec-focus">技術在我們手上 世界就在我們手上</p>
+      <p class="kv-location">礁溪老爺酒店 11/2 - 3, 2019</p>
+    </div>
+    <picture>
+      <source srcset="img/kv-bear-24-80.webp" media="(min-width: 768px)" />
+      <source srcset="img/kv-bear-24.png" />
+      <img src="img/kv-bear-24.png" />
+    </picture>
+  </div>
+</section>
+
+<div class="agenda">
+  <div class="container">
+    <div class="tab-group">
+      <a routerLink="/agenda/day1" routerLinkActive="active" route>11月2日</a>
+      <a routerLink="/agenda/day2" routerLinkActive="active">11月3日</a>
+      <div class="bear-see"></div>
+    </div>
+    <article class="agenda-text">
+      <h1>議程</h1>
+      <div class="agenda-list">
+        <section
+          class="agenda-section"
+          *ngFor="let agenda of agendas$ | async"
+          [ngClass]="{
+            'for-time': !agenda.isSession,
+            'for-speaker': agenda.isSession
+          }"
+        >
+          <div class="agenda-list-content">
+            <h2>{{ agenda.title }}</h2>
+            <div class="speaker" *ngIf="agenda.speaker">
+              <span>{{ agenda.speaker }}</span>
+            </div>
+            <p [innerText]="agenda.description" *ngIf="agenda.description"></p>
+          </div>
+          <time>{{ agenda.startTime }} ~ {{ agenda.endTime }}</time>
+        </section>
+      </div>
+    </article>
+  </div>
+</div>
