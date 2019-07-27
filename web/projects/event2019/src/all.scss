@@ -1,4 +1,6 @@
 @import './styles/colors';
+@import './styles/breakpoints';
+
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,700&display=swap');
 
 @import './styles/reset';
@@ -53,7 +55,7 @@ picture img {
   top: 0;
   z-index: 10;
   background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.5), #fff);
-  @media screen and (min-width: 768px) {
+  @include for-tablet-portrait-down {
     position: fixed;
     width: 100%;
   }
@@ -63,17 +65,17 @@ picture img {
 }
 .logo {
   display: flex;
-  @media screen and (max-width: 767px) {
+  @include for-tablet-portrait-down {
     align-items: center;
   }
-  @media screen and (min-width: 768px) {
+  @include for-tablet-portrait-up {
     width: 120px;
   }
   a {
     display: block;
     width: 60px;
     padding: 6px 0;
-    @media screen and (min-width: 768px) {
+    @include for-tablet-portrait-up {
       width: 100%;
     }
   }
@@ -85,7 +87,7 @@ picture img {
   height: 36px;
   background-color: #000;
   margin-left: auto;
-  @media screen and (min-width: 768px) {
+  @include for-tablet-portrait-up {
     display: none;
   }
 }
@@ -93,7 +95,7 @@ picture img {
   display: flex;
   justify-content: flex-end;
   flex: 1 0 0px;
-  @media screen and (max-width: 767px) {
+  @include for-tablet-portrait-down {
     // flex-flow: column;
     // position: absolute;
     // top: 100%;
@@ -104,7 +106,7 @@ picture img {
     color: #000;
     text-decoration: none;
     font-size: 28px;
-    @media screen and (max-width: 767px) {
+    @include for-tablet-portrait-down {
       font-size: 18px;
     }
   }
@@ -115,25 +117,25 @@ picture img {
   position: relative;
   min-height: calc(100vh - 200px);
   background: url('img/kv-circle.svg') no-repeat center bottom / cover;
-  @media screen and (min-width: 768px) {
+  @include for-tablet-portrait-up {
     display: flex;
     align-items: center;
     height: 100vh;
     padding: 0;
   }
   &.kv-sec{
-    @media screen and (max-width:767px){
+    @include for-tablet-portrait-down {
       margin-bottom: 100px;
     }
   }
   .container {
-    @media screen and (min-width: 768px) {
+    @include for-tablet-portrait-up {
       align-items: center;
       max-width: 1900px;
     }
   }
   .kv-txt {
-    @media screen and (max-width: 767px) {
+    @include for-tablet-portrait-down {
       // position: absolute;
       width: 100%;
       height: 100%;
@@ -145,7 +147,7 @@ picture img {
       text-shadow: 1px 1px 1px #fff, -1px -1px 1px #fff, 1px -1px 1px #fff,
         -1px 1px 1px #fff, 0px 0px 6px #fff;
     }
-    @media screen and (min-width: 768px) {
+    @include for-tablet-portrait-up {
       width: 100%;
       flex: 0 0 100%;
       overflow: hidden;
@@ -154,13 +156,13 @@ picture img {
       padding-left: 2em;
       box-sizing: border-box;
     }
-    @media (prefers-color-scheme: dark) {
+    @include for-drak-mode {
         color: $dark-fc;
         text-shadow: none;
     }
   }
   picture {
-    @media screen and (min-width: 768px) {
+    @include for-tablet-portrait-up {
       width: 50%;
     }
   }
@@ -168,10 +170,10 @@ picture img {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0.3em;
-    @media screen and (min-width: 768px) {
+    @include for-tablet-portrait-up {
       font-size: 4.5rem;
     }
-    @media screen and (min-width: 992px) {
+    @include for-tablet-up {
       font-size: 8.4375rem;
     }
   }
@@ -180,15 +182,15 @@ picture img {
   }
   .sec-focus {
     font-size: 1.5rem;
-    @media screen and (max-width: 767px) {
+    @include for-tablet-portrait-down {
       span {
         display: block;
       }
     }
-    @media screen and (min-width: 768px) {
+    @include for-tablet-portrait-up {
       font-size: 1.8rem;
     }
-    @media screen and (min-width: 992px) {
+    @include for-tablet-up {
       font-size: 3rem;
     }
   }
@@ -196,10 +198,10 @@ picture img {
     font-size: 1.4rem;
     color: #f00;
     font-weight: 700;
-    @media screen and (min-width: 768px) {
+    @include for-tablet-portrait-up {
       font-size: 1.6rem;
     }
-    @media screen and (min-width: 992px) {
+    @include for-tablet-up {
       font-size: 2.375rem;
     }
     &::before {
@@ -241,7 +243,7 @@ picture img {
   }
   .content {
     display: flex;
-    @media screen and (max-width: 767px) {
+    @include for-tablet-portrait-down {
       flex-flow: wrap;
     }
   }
@@ -262,10 +264,10 @@ picture img {
     text-align: center;
     flex-flow: column;
     color: $basic-gray;
-    @media screen and (max-width: 767px) {
+    @include for-tablet-portrait-down {
       width: 100%;
     }
-    @media screen and (min-width: 768px) {
+    @include for-tablet-portrait-up {
       flex: 1 0 0px;
     }
     &:nth-of-type(1) time {
@@ -281,12 +283,12 @@ picture img {
       font-size: 1.5rem;
       font-weight: 700;
       margin: 0.8em 0;
-      @media (prefers-color-scheme: dark) {
+      @include for-drak-mode {
         color: $dark-fc;
       }
     }
     p{
-      @media (prefers-color-scheme: dark) {
+      @include for-drak-mode {
         color: #ddd;
       }
     }
@@ -303,7 +305,7 @@ picture img {
   align-items: center;
   min-height: 60vh;
   padding: 40px 0 100px;
-  @media screen and (min-width: 768px) {
+  @include for-tablet-portrait-up {
     background: url('img/ticket-cur-bg.svg') no-repeat center center / 100% auto;
   }
   .container {
@@ -311,7 +313,7 @@ picture img {
   }
   .container > picture {
     width: 100%;
-    @media screen and (max-width: 767px) {
+    @include for-tablet-portrait-down {
       position: absolute;
       z-index: -1;
       overflow: hidden;
@@ -329,13 +331,13 @@ picture img {
     justify-content: space-around;
     align-items: center;
 
-    @media screen and (min-width: 768px) {
+    @include for-tablet-portrait-up {
       position: absolute;
       height: 100%;
     }
 
     .content {
-      @media screen and (min-width: 768px) {
+      @include for-tablet-portrait-up {
         width: 40%;
       }
     }
@@ -349,7 +351,7 @@ picture img {
     h2 {
       margin-bottom: 1em;
     }
-    @media screen and (min-width: 768px) {
+    @include for-tablet-portrait-up {
       width: 30%;
     }
 
@@ -372,7 +374,7 @@ picture img {
   }
   .container {
     padding: 70px 20px;
-    @media screen and (min-width:768px){
+    @include for-tablet-portrait-up{
       padding: 70px 0;  
     }
   }
@@ -384,14 +386,14 @@ picture img {
     width: 100%;
     display: flex;
     flex-flow: wrap;
-    @media screen and (min-width: 768px) {
+    @include for-tablet-portrait-up {
       flex-flow: nowrap;
     }
   }
   picture {
     filter: grayscale(0.7);
     transition: filter 0.3s;
-    @media screen and (min-width: 768px) {
+    @include for-tablet-portrait-up {
       width: 50%;
       margin: 0 15px;
     }
@@ -401,7 +403,7 @@ picture img {
   }
   .txt {
     width: 100%;
-    @media screen and (min-width: 768px) {
+    @include for-tablet-portrait-up {
       width: 50%;
       margin: 0 15px;
     }
@@ -475,7 +477,7 @@ picture img {
 
   .copyright {
     display: block;
-    @media screen and (min-width: 768px) {
+    @include for-tablet-portrait-up {
       display: inline-block;
     }
   }
@@ -487,7 +489,7 @@ picture img {
   position: fixed;
   right: 10px;
   bottom: 20px;
-  @media screen and (min-width: 768px) {
+  @include for-tablet-portrait-up {
     width: 128px;
     right: 50px;
     bottom: 50px;
@@ -562,7 +564,7 @@ picture img {
 .tab-group{
   position: relative;
   margin: auto auto 50px;
-  @media screen and (min-width:768px){
+  @include for-tablet-portrait-up{
     margin: auto auto 80px;
   }
   &::before{
@@ -584,7 +586,7 @@ picture img {
     height: 100px;
     background: url(img/bear-see.png) 0px 0px / auto 100%;
     transition: none;
-    @media screen and (min-width:768px){
+    @include for-tablet-portrait-up{
       bottom: -50px;
       width: 100px;
       height: 140px;
@@ -592,18 +594,18 @@ picture img {
   }
   a:first-of-type.active ~ .bear-see{
     left: 78px;
-    @media screen and (min-width:768px){
+    @include for-tablet-portrait-up{
       left: 80px;
     }
   }
   a:last-of-type.active ~ .bear-see{
     left: 140px;
     transform: scaleX(-1);
-    @media screen and (min-width:768px){
+    @include for-tablet-portrait-up{
       left: 200px;
     }
   }
-  @media screen and (min-width:1200px){
+  @include for-desktop-up {
     a:not(.active):hover ~ .bear-see{
       background-position: -100px bottom;
     }
@@ -621,7 +623,7 @@ picture img {
   }
   a:last-of-type{
     margin-left: 80px;
-    @media screen and (min-width:768px){
+    @include for-tablet-portrait-up{
       margin-left: 170px;
     }
   }
@@ -631,7 +633,7 @@ picture img {
   h1{
     font-size: 2.6rem;
     text-align: center;
-    @media screen and (max-width:767px){
+    @include for-tablet-portrait-down {
       margin-bottom: 1rem;
     }
   }
@@ -640,7 +642,7 @@ picture img {
   align-items: center;
   position: relative;
   padding: 40px 0;
-  @media screen and (min-width:768px){
+  @include for-tablet-portrait-up{
     display: flex;
     &::before,
     &::after{
@@ -671,17 +673,17 @@ picture img {
 }
 .agenda-section time{
   font-size: 1.375rem;
-  @media screen and (max-width:767px){
+  @include for-tablet-portrait-down{
     position: absolute;
     background-color: #ccc;
     padding: 10px 20px;
     top: 0px;
     left: -10px;
   }
-  @media (prefers-color-scheme: dark) {
+  @include for-drak-mode {
       color: $dark-fc;
   }
-  @media screen and (min-width:768px){
+  @include for-tablet-portrait-up{
     order: -1;
     width: 15%;
     text-align: center;
@@ -716,7 +718,7 @@ $pos4e: $pos4s + 0.1;
 
 $bgc-main1:#fe9641;
 .for-speaker time{ 
-  @media screen and (max-width:767px){
+  @include for-tablet-portrait-down{
     background: $bgc-main1;
     color: #fff;
   }
@@ -738,7 +740,7 @@ $bgc-main1:#fe9641;
 }
 $bgc-main2:#A5D93D;
 .for-speaker:nth-of-type(2n) time{ 
-  @media screen and (max-width:767px){
+  @include for-tablet-portrait-down{
     background: $bgc-main2;
     color: #fff;
   }
@@ -757,7 +759,7 @@ $bgc-main2:#A5D93D;
 }
 $bgc-main3:#f0c53f;
 .for-speaker:nth-of-type(3n) time{
-  @media screen and (max-width:767px){
+  @include for-tablet-portrait-down{
     background: $bgc-main3;
     color: #fff;
   }
@@ -776,7 +778,7 @@ $bgc-main3:#f0c53f;
 }
 $bgc-main4:#4cc7d4;
 .for-speaker:nth-of-type(4n) time{ 
-  @media screen and (max-width:767px){
+  @include for-tablet-portrait-down{
     background: $bgc-main4;
     color: #fff;
   }
@@ -795,7 +797,7 @@ $bgc-main4:#4cc7d4;
 }
 $bgc-main5:#706eb1;
 .for-speaker:nth-of-type(5n) time{
-  @media screen and (max-width:767px){
+  @include for-tablet-portrait-down{
     background: $bgc-main5;
     color: #fff;
   }
@@ -815,7 +817,7 @@ $bgc-main5:#706eb1;
 .agenda-section .speaker{
   font-size: 1.5rem;
 
-  @media screen and (min-width:768px){
+  @include for-tablet-portrait-up{
     position: absolute;
     width: 20%;
     right: 0;
@@ -854,7 +856,7 @@ $bgc-main5:#706eb1;
   color: $basic-gray;
   box-shadow: 5px 5px 10px rgba(0,0,0,.3);
 
-  @media screen and (min-width:768px){
+  @include for-tablet-portrait-up{
     border-radius: 30px;
     position: relative;
     z-index: 2;
@@ -863,13 +865,13 @@ $bgc-main5:#706eb1;
     background-color: #fff;
 
   }
-  @media (prefers-color-scheme: dark) {
+  @include for-drak-mode {
     background-color: #666;
     color: $dark-fc;
   }
 
   h2,p{
-    @media screen and (min-width:768px){
+    @include for-tablet-portrait-up{
       margin-right: 21%;  
     }
   }
@@ -882,7 +884,7 @@ $bgc-main5:#706eb1;
   margin-bottom: 0;
 }
 .for-time .agenda-list-content{
-  @media screen and (min-width:768px){
+  @include for-tablet-portrait-up{
     box-shadow: none;
   }
 }
