@@ -585,7 +585,7 @@ picture img {
     bottom: -36px;
     width: 70px;
     height: 100px;
-    background: url(img/bear-see.png) 0px 0px / auto 100%;
+    background: url('./img/bear-see.png') 0px 0px / auto 100%;
     transition: none;
     @include for-tablet-portrait-up{
       bottom: -50px;
