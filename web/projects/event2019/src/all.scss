@@ -1,5 +1,6 @@
 @import './styles/colors';
 @import './styles/breakpoints';
+@import './styles/variables';
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,700&display=swap');
 
@@ -702,31 +703,18 @@ picture img {
   }
 }
 
-//gradient position and angle
-$angle1: -32deg;
-$angle2: -27deg;
-$angle3: -27deg;
-$angle4: -10deg;
-$pos1s: 45%;
-$pos1e: $pos1s + 0.1;
-$pos2s: 47%;
-$pos2e: $pos2s + 0.1;
-$pos3s: 48%;
-$pos3e: $pos3s + 0.1;
-$pos4s: 58%;
-$pos4e: $pos4s + 0.1;
+.for-speaker {
+  time{ 
+    @include for-tablet-portrait-down{
+      background: $bgc-main1;
+      color: #fff;
+    }
+    &::before{
+      background: $bgc-main1;
+    }
+  }
 
-$bgc-main1:#fe9641;
-.for-speaker time{ 
-  @include for-tablet-portrait-down{
-    background: $bgc-main1;
-    color: #fff;
-  }
-  &::before{
-    background: $bgc-main1;
-  }
-}
-.for-speaker .speaker::before{
+  .speaker::before{
     $bgcA: $bgc-main1;
     $bgcB: #fdaa66;
     background-repeat: no-repeat;
@@ -737,83 +725,97 @@ $bgc-main1:#fe9641;
                       linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
                       linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
     background-color: $bgcA;
-}
-$bgc-main2:#A5D93D;
-.for-speaker:nth-of-type(2n) time{ 
-  @include for-tablet-portrait-down{
-    background: $bgc-main2;
-    color: #fff;
   }
-  &::before{
-    background: $bgc-main2;
+
+  &:nth-of-type(2n) {
+    time{ 
+      @include for-tablet-portrait-down{
+        background: $bgc-main2;
+        color: #fff;
+      }
+      &::before{
+        background: $bgc-main2;
+      }
+    }
+
+    .speaker::before{
+      $bgcA: $bgc-main2;
+      $bgcB: #B7E068;
+      background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
+                        linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
+                        linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
+                        linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
+      background-color: $bgcA;
+    }
+  }
+
+  &:nth-of-type(3n) {
+    time{
+      @include for-tablet-portrait-down{
+        background: $bgc-main3;
+        color: #fff;
+      }
+      &::before{
+        background: $bgc-main3;
+      }
+    }
+
+    .speaker::before{
+      $bgcA: $bgc-main3;
+      $bgcB: #F4D66F;
+      background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
+                        linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
+                        linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
+                        linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
+      background-color: $bgcA;
+    }
+  }
+
+  &:nth-of-type(4n) {
+    time{ 
+      @include for-tablet-portrait-down{
+        background: $bgc-main4;
+        color: #fff;
+      }
+      &::before{
+        background: $bgc-main4;
+      }
+    }
+
+    .speaker::before{
+      $bgcA: $bgc-main4;
+      $bgcB: #7AD7E0;
+      background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
+                        linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
+                        linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
+                        linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
+      background-color: $bgcA;
+    }
+  }
+
+  &:nth-of-type(5n) {
+    time{
+      @include for-tablet-portrait-down{
+        background: $bgc-main5;
+        color: #fff;
+      }
+      &::before{
+        background: $bgc-main5;
+      }
+    }
+
+    .speaker::before{
+      $bgcA: $bgc-main5;
+      $bgcB: #9795C7;
+      background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
+                        linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
+                        linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
+                        linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
+      background-color: $bgcA;
+    }
   }
 }
-.for-speaker:nth-of-type(2n) .speaker::before{
-  $bgcA: $bgc-main2;
-  $bgcB: #B7E068;
-  background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
-                    linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
-                    linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
-                    linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
-  background-color: $bgcA;
-}
-$bgc-main3:#f0c53f;
-.for-speaker:nth-of-type(3n) time{
-  @include for-tablet-portrait-down{
-    background: $bgc-main3;
-    color: #fff;
-  }
-  &::before{
-    background: $bgc-main3;
-  }
-}
-.for-speaker:nth-of-type(3n) .speaker::before{
-  $bgcA: $bgc-main3;
-  $bgcB: #F4D66F;
-  background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
-                    linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
-                    linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
-                    linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
-  background-color: $bgcA;
-}
-$bgc-main4:#4cc7d4;
-.for-speaker:nth-of-type(4n) time{ 
-  @include for-tablet-portrait-down{
-    background: $bgc-main4;
-    color: #fff;
-  }
-  &::before{
-    background: $bgc-main4;
-  }
-}
-.for-speaker:nth-of-type(4n) .speaker::before{
-  $bgcA: $bgc-main4;
-  $bgcB: #7AD7E0;
-  background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
-                    linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
-                    linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
-                    linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
-  background-color: $bgcA;
-}
-$bgc-main5:#706eb1;
-.for-speaker:nth-of-type(5n) time{
-  @include for-tablet-portrait-down{
-    background: $bgc-main5;
-    color: #fff;
-  }
-  &::before{
-    background: $bgc-main5;
-  }
-}
-.for-speaker:nth-of-type(5n) .speaker::before{
-  $bgcA: $bgc-main5;
-  $bgcB: #9795C7;
-  background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
-                    linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
-                    linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
-                    linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
-  background-color: $bgcA;
-}
+
 .agenda-section .speaker{
   font-size: 1.5rem;
 
@@ -880,11 +882,14 @@ $bgc-main5:#706eb1;
     font-size: 1.5rem;
   }
 }
-.for-time .agenda-list-content h2{
-  margin-bottom: 0;
-}
-.for-time .agenda-list-content{
-  @include for-tablet-portrait-up{
-    box-shadow: none;
+.for-time{
+  .agenda-list-content{
+    @include for-tablet-portrait-up{
+      box-shadow: none;
+    }
+
+    h2{
+      margin-bottom: 0;
+    }
   }
 }
