@@ -576,6 +576,9 @@ picture img {
   background-image: -o-linear-gradient(bottom, #ecf1f2 0%, rgba(236, 241, 242, 0) 200px);
   background-image: linear-gradient(0deg, #ecf1f2 0%, rgba(236, 241, 242, 0) 200px); }
 
+.agenda-list {
+  width: 100%; }
+
 .tab-group {
   position: relative;
   margin: auto auto 50px; }
