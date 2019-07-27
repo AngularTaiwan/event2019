@@ -1,0 +1,29 @@
+@mixin for-drak-mode {
+  @media (prefers-color-scheme: dark){
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-down {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-up {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media screen and (min-width:1200px) {
+    @content;
+  }
+}
