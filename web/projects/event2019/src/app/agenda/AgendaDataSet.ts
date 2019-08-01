@@ -28,7 +28,7 @@ export const AgendaDataSet = {
       endTime: '17:00',
       title: 'Angular Testing',
       description:
-        '測試與開發，這兩者的關係對於開發者來說，可以說是又愛又恨，喜歡他的好但不喜歡他的麻煩。幸運的我們在開發 Angular 時，Angular 團隊已經為我們設想了，畢竟 Google 是一間很注重測試的公司，就讓我們來了解在 Angular 內寫測試是多麼幸福的一件事',
+        '測試與開發，這兩者的關係對於開發者來說，可以說是又愛又恨，喜歡測試的好但不喜歡他的麻煩。幸運的是我們在開發 Angular 時，Angular 團隊已經為我們設想了撰寫測試時要有的基本要素，畢竟 Google 是一間很注重測試的公司，就讓我們來了解在 Angular 內寫測試是多麼幸福的一件事',
       speaker: 'Kevin Yang'
     },
     {
@@ -56,8 +56,7 @@ export const AgendaDataSet = {
       startTime: '08:30',
       endTime: '09:30',
       title: 'TBD',
-      description:
-        '傳輸哪些就有如今依靠智慧聯想維持妹妹實施儘管下來有限公出現屏幕不知同時權威',
+      description: '',
       speaker: 'TBD'
     },
     {
@@ -71,7 +70,7 @@ export const AgendaDataSet = {
       startTime: '10:00',
       endTime: '11:00',
       title: 'TBD',
-      description: '傳輸哪些就有如今依靠智慧聯想維持妹妹實施儘管下來有限公',
+      description: '',
       speaker: 'TBD'
     },
     {
@@ -79,7 +78,7 @@ export const AgendaDataSet = {
       startTime: '11:00',
       endTime: '12:00',
       title: 'TBD',
-      description: '傳輸哪些就有如今依靠智慧聯想維持妹妹實施儘管下來有限公',
+      description: '',
       speaker: 'TBD'
     },
     {
@@ -93,7 +92,7 @@ export const AgendaDataSet = {
       startTime: '13:00',
       endTime: '14:00',
       title: 'TBD',
-      description: '傳輸哪些就有如今依靠智慧聯想維持妹妹實施儘管下來有限公',
+      description: '',
       speaker: 'TBD'
     },
     {
@@ -107,7 +106,7 @@ export const AgendaDataSet = {
       startTime: '14:30',
       endTime: '15:30',
       title: 'TBD',
-      description: '傳輸哪些就有如今依靠智慧聯想維持妹妹實施儘管下來有限公',
+      description: '',
       speaker: 'TBD'
     },
     {
@@ -115,7 +114,7 @@ export const AgendaDataSet = {
       startTime: '15:30',
       endTime: '16:30',
       title: 'TBD',
-      description: '傳輸哪些就有如今依靠智慧聯想維持妹妹實施儘管下來有限公',
+      description: '',
       speaker: 'TBD'
     },
     {
@@ -123,7 +122,7 @@ export const AgendaDataSet = {
       startTime: '16:30',
       endTime: '17:00',
       title: 'TBD',
-      description: '傳輸哪些就有如今依靠智慧聯想維持妹妹實施儘管下來有限公',
+      description: '',
       speaker: 'TBD'
     },
     {
