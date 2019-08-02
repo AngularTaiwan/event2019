@@ -58,7 +58,7 @@ namespace host
                 ContentTypeProvider = provider,
                 OnPrepareResponse = ctx =>
                 {
-                    const int durationInSeconds = 60 * 60 * 24 * 7;
+                    const double durationInSeconds = 60 * 60 * 24 * 635.25;
                     ctx.Context.Response.Headers[HeaderNames.CacheControl] =
                         "public,max-age=" + durationInSeconds;
                 }
