@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Net.Http.Headers;
 
 namespace host
 {
@@ -18,7 +19,13 @@ namespace host
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddResponseCaching(options =>
+            {
+                options.UseCaseSensitivePaths = false;
+                options.MaximumBodySize = 1024;
+                options.SizeLimit = 100 * 1024 * 1024;
+            });
+           
             services.AddRendertron(rendertronUrl: "https://spa-ssr.azurewebsites.net/render/");
             services.AddSpaStaticFiles(options =>
             {
@@ -41,23 +48,22 @@ namespace host
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            //app.UseStaticFiles();
 
             FileExtensionContentTypeProvider provider = new FileExtensionContentTypeProvider();
             provider.Mappings[".webmanifest"] = "application/manifest+json";
-
+            app.UseResponseCaching();
             app.UseSpaStaticFiles(new StaticFileOptions()
             {
-                ContentTypeProvider = provider
+                ContentTypeProvider = provider,
+                OnPrepareResponse = ctx =>
+                {
+                    const int durationInSeconds = 60 * 60 * 24 * 7;
+                    ctx.Context.Response.Headers[HeaderNames.CacheControl] =
+                        "public,max-age=" + durationInSeconds;
+                }
             });
-
-            //app.UseMvc(routes =>
-            //{
-            //    routes.MapRoute(
-            //        name: "default",
-            //        template: "{controller}/{action=Index}/{id?}");
-            //});
-
+            
             app.UseSpa(spa =>
             {
                 spa.Options.DefaultPage = "/index.html";
