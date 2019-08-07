@@ -26,9 +26,9 @@ async function main(routes) {
   const projectOutputFolder = getProjectOutput(angularJSON);
 
   const app = new express();
-  const index = (await readFileSync(
+  const index = readFileSync(
     join(process.cwd(), projectOutputFolder, 'index.html')
-  )).toString();
+  ).toString();
   app.get('*.*', express.static(join(process.cwd(), projectOutputFolder)));
   app.get('*', (req, res) => res.send(index));
 
@@ -42,7 +42,7 @@ async function main(routes) {
     routes.map(async route => {
       const page = await browser.newPage();
       await page.goto(HOST + route);
-      const result = '<!DOCTYPE html>' + (await page.content());
+      const result = await page.content();
       // // Defining the html file name that will be created
       const file = join(
         process.cwd(),
@@ -54,10 +54,10 @@ async function main(routes) {
       const dir = dirname(file);
 
       // Test if the directory exist, if not create the directory
-      if (!(await existsSync(dir))) await mkdirSync(dir, { recursive: true });
+      if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
 
       // Write the rendered html file
-      await writeFileSync(file, result);
+      writeFileSync(file, result);
     })
   ).then(() => {
     browser.close();
