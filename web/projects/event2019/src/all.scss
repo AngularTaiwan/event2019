@@ -53,7 +53,7 @@ picture img {
   opacity: 0;
 }
 
-#menu-control:checked~* .main-nav {
+#menu-control:checked ~ * .main-nav {
   position: absolute;
 }
 
@@ -318,16 +318,16 @@ picture img {
     }
 
     &:nth-of-type(1) time {
-      background: #A32F0A;
+      background: #a32f0a;
       // background: #f4511e;
     }
 
     &:nth-of-type(2) time {
-      background: #265E59 // background: #f3a406;
+      background: #265e59; // background: #f3a406;
     }
 
     &:nth-of-type(3) time {
-      background: #973D07;
+      background: #973d07;
 
       // background: #4db6ac;
     }
@@ -370,7 +370,7 @@ picture img {
     padding: 0;
   }
 
-  .container>picture {
+  .container > picture {
     width: 100%;
 
     @include for-tablet-portrait-down {
@@ -592,9 +592,11 @@ picture img {
 
 // --------------------------
 .coc {
-  background-image: linear-gradient(0deg,
-      #ecf1f2 0%,
-      rgba(236, 241, 242, 0) 200px);
+  background-image: linear-gradient(
+    0deg,
+    #ecf1f2 0%,
+    rgba(236, 241, 242, 0) 200px
+  );
 
   h1 {
     font-size: 32px;
@@ -649,7 +651,6 @@ picture img {
       padding-right: 0.5em;
     }
   }
-
 }
 
 .coc-text {
@@ -659,9 +660,11 @@ picture img {
 
 //------------------
 .agenda {
-  background-image: linear-gradient(0deg,
-      #ecf1f2 0%,
-      rgba(236, 241, 242, 0) 200px);
+  background-image: linear-gradient(
+    0deg,
+    #ecf1f2 0%,
+    rgba(236, 241, 242, 0) 200px
+  );
 }
 
 .agenda-list {
@@ -714,9 +717,10 @@ picture img {
     text-decoration: none;
     border-radius: 10px;
     position: relative;
-    background: #f3a406;
+    background: #265e59;
+    // background: #f3a406;
 
-    &:first-of-type.active~.bear-see {
+    &:first-of-type.active ~ .bear-see {
       left: 78px;
 
       @include for-tablet-portrait-up {
@@ -731,7 +735,7 @@ picture img {
         margin-left: 170px;
       }
 
-      &.active~.bear-see {
+      &.active ~ .bear-see {
         left: 140px;
         transform: scaleX(-1);
 
@@ -742,12 +746,13 @@ picture img {
     }
 
     &.active {
-      background: #f4511e;
+      background: #a32f0a;
+      // background: #f4511e;
     }
   }
 
   @include for-desktop-up {
-    a:not(.active):hover~.bear-see {
+    a:not(.active):hover ~ .bear-see {
       background-position: -100px bottom;
     }
   }
@@ -879,8 +884,12 @@ picture img {
 
     .speaker::before {
       $bgcA: $bgc-main2;
-      $bgcB: #B7E068;
-      background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
+      $bgcB: #b7e068;
+      background-image: linear-gradient(
+          $angle1,
+          $bgcA $pos1s,
+          transparent $pos1e
+        ),
         linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
         linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
         linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
@@ -902,8 +911,12 @@ picture img {
 
     .speaker::before {
       $bgcA: $bgc-main3;
-      $bgcB: #F4D66F;
-      background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
+      $bgcB: #f4d66f;
+      background-image: linear-gradient(
+          $angle1,
+          $bgcA $pos1s,
+          transparent $pos1e
+        ),
         linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
         linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
         linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
@@ -925,8 +938,12 @@ picture img {
 
     .speaker::before {
       $bgcA: $bgc-main4;
-      $bgcB: #7AD7E0;
-      background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
+      $bgcB: #7ad7e0;
+      background-image: linear-gradient(
+          $angle1,
+          $bgcA $pos1s,
+          transparent $pos1e
+        ),
         linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
         linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
         linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
@@ -948,8 +965,12 @@ picture img {
 
     .speaker::before {
       $bgcA: $bgc-main5;
-      $bgcB: #9795C7;
-      background-image: linear-gradient($angle1, $bgcA $pos1s, transparent $pos1e),
+      $bgcB: #9795c7;
+      background-image: linear-gradient(
+          $angle1,
+          $bgcA $pos1s,
+          transparent $pos1e
+        ),
         linear-gradient($angle2, $bgcB $pos2s, transparent $pos2e),
         linear-gradient($angle3, $bgcA $pos3s, transparent $pos3e),
         linear-gradient($angle4, $bgcB $pos4s, transparent $pos4e);
@@ -991,7 +1012,7 @@ picture img {
       width: 3rem;
       height: 1px;
       background-color: #fff;
-      margin: .9em auto 0;
+      margin: 0.9em auto 0;
     }
   }
 }
@@ -1000,7 +1021,7 @@ picture img {
   padding: 20px;
   margin-left: auto;
   color: $basic-gray;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 
   @include for-tablet-portrait-up {
     border-radius: 30px;
@@ -1009,7 +1030,6 @@ picture img {
     width: 70%;
     overflow: hidden;
     background-color: #fff;
-
   }
 
   @include for-drak-mode {
@@ -1025,7 +1045,7 @@ picture img {
   }
 
   h2 {
-    margin-bottom: .6em;
+    margin-bottom: 0.6em;
     font-size: 1.5rem;
   }
 }

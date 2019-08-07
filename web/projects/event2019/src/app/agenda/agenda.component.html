@@ -8,7 +8,7 @@
     <picture>
       <source srcset="img/kv-bear-24-80.webp" media="(min-width: 768px)" />
       <source srcset="img/kv-bear-24.png" />
-      <img src="img/kv-bear-24.png" />
+      <img src="img/kv-bear-24.png" alt="banner image" />
     </picture>
   </div>
 </section>
@@ -16,21 +16,17 @@
 <div class="agenda">
   <div class="container">
     <div class="tab-group">
-      <a routerLink="/agenda/day1" routerLinkActive="active" route>11月2日</a>
-      <a routerLink="/agenda/day2" routerLinkActive="active">11月3日</a>
+      <a routerLink="/agenda/day1" routerLinkActive="active" aria-label="2019/11/2">11月2日</a>
+      <a routerLink="/agenda/day2" routerLinkActive="active" aria-label="2019/11/3">11月3日</a>
       <div class="bear-see"></div>
     </div>
     <article class="agenda-text">
       <h1>議程</h1>
       <div class="agenda-list">
-        <section
-          class="agenda-section"
-          *ngFor="let agenda of agendas$ | async"
-          [ngClass]="{
+        <section class="agenda-section" *ngFor="let agenda of agendas$ | async" [ngClass]="{
             'for-time': !agenda.isSession,
             'for-speaker': agenda.isSession
-          }"
-        >
+          }">
           <div class="agenda-list-content">
             <h2>{{ agenda.title }}</h2>
             <div class="speaker" *ngIf="agenda.speaker">
