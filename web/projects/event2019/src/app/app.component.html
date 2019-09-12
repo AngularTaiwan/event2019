@@ -3,28 +3,18 @@
     <h1 class="logo">
       <a routerLink="/" aria-label="go to homepage">
         <picture>
-          <source
-            srcset="img/logo-bear-70.webp 1x, img/logo-bear-2x.webp 2x"
-            media="(min-width: 768px)"
-            type="image/webp"
-          />
-          <source
-            srcset="img/logo-bear.png 1x, img/logo-bear-2x.png 2x"
-            type="image/png"
-          />
-          <img
-            src="img/logo-bear.png"
-            alt="logo"
-            srcset="img/logo-bear-2x.png"
-          />
+          <source srcset="img/logo-bear-70.webp 1x, img/logo-bear-2x.webp 2x"
+                  media="(min-width: 768px)" type="image/webp" />
+          <source srcset="img/logo-bear.png 1x, img/logo-bear-2x.png 2x" type="image/png" />
+          <img src="img/logo-bear.png" alt="logo" srcset="img/logo-bear-2x.png" />
         </picture>
       </a>
     </h1>
 
     <nav class="main-nav">
       <a routerLink="/agenda" aria-label="go to agenda page">議程</a>
-      <a routerLink="/" aria-label="go to speaker page">講者</a>
-      <a routerLink="/" aria-label="go to venue page">會場</a>
+      <!-- <a routerLink="/" aria-label="go to speaker page">講者</a> -->
+      <!-- <a routerLink="/" aria-label="go to venue page">會場</a> -->
     </nav>
   </div>
 </header>
@@ -35,20 +25,10 @@
   <h2>聯絡大會</h2>
   <div class="container">
     <picture>
-      <source
-        srcset="img/logo-bear-70.webp 1x, img/logo-bear-2x.webp 2x"
-        media="(min-width: 768px)"
-        type="image/webp"
-      />
-      <source
-        srcset="img/logo-bear.png 1x, img/logo-bear-2x.png 2x"
-        type="image/png"
-      />
-      <img
-        src="img/logo-bear.png"
-        alt="footer background"
-        srcset="img/logo-bear-2x.png"
-      />
+      <source srcset="img/logo-bear-70.webp 1x, img/logo-bear-2x.webp 2x" media="(min-width: 768px)"
+              type="image/webp" />
+      <source srcset="img/logo-bear.png 1x, img/logo-bear-2x.png 2x" type="image/png" />
+      <img src="img/logo-bear.png" alt="footer background" srcset="img/logo-bear-2x.png" />
     </picture>
     <div class="footer-txt">
       <!-- <p>
@@ -64,34 +44,21 @@
       </p> -->
       <p>
         聯絡大會
-        <a
-          class="link"
-          href="mailto:contact@angular.tw"
-          aria-label="email to Angular Taiwan"
-          >contact@angular.tw</a
-        >
+        <a class="link" href="mailto:contact@angular.tw"
+           aria-label="email to Angular Taiwan">contact@angular.tw</a>
       </p>
       <p>
-        <a class="link" routerLink="/coc" aria-label="Code of Conduct"
-          >【 行為準則 】</a
-        >
+        <a class="link" routerLink="/coc" aria-label="Code of Conduct">【 行為準則 】</a>
         我們依從大會行為準則，以確保所有與會者都能在大會活動期間受到應有的尊重。
       </p>
       <p class="copyright">All Rights Reserved © 2019</p>
     </div>
   </div>
 </footer>
-<a
-  class="backTop scroll-to-top"
-  (click)="scrollToTop()"
-  [ngClass]="{ 'show-scroll-top': windowScrolled }"
->
+<a class="backTop scroll-to-top" (click)="scrollToTop()"
+   [ngClass]="{ 'show-scroll-top': windowScrolled }">
   <picture>
-    <source
-      srcset="img/backTotop-24-70.webp"
-      media="(min-width: 768px)"
-      type="image/webp"
-    />
+    <source srcset="img/backTotop-24-70.webp" media="(min-width: 768px)" type="image/webp" />
     <source srcset="img/backTotop-24.png" type="image/png" />
     <img src="img/backTotop-24.png" alt="back to top" />
   </picture>
