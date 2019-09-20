@@ -18,7 +18,7 @@
             "main": "projects/event2019/src/main.ts",
             "polyfills": "projects/event2019/src/polyfills.ts",
             "tsConfig": "projects/event2019/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/event2019/src/favicon.ico",
               "projects/event2019/src/assets",
@@ -130,6 +130,11 @@
   },
   "defaultProject": "event2019",
   "schematics": {
-    "@schematics/angular:component": { "spec": false }
+    "@schematics/angular:component": {
+      "spec": false
+    }
+  },
+  "cli": {
+    "analytics": false
   }
 }
