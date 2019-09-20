@@ -18,7 +18,7 @@
             "main": "projects/event2019/src/main.ts",
             "polyfills": "projects/event2019/src/polyfills.ts",
             "tsConfig": "projects/event2019/tsconfig.app.json",
-            "aot": true,
+            "aot": false,
             "assets": [
               "projects/event2019/src/favicon.ico",
               "projects/event2019/src/assets",
