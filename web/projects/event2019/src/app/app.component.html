@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="logo">
       <a routerLink="/" aria-label="go to homepage">
-        <picture>
+        <picture loading="lazy">
           <source srcset="img/logo-bear-70.webp 1x, img/logo-bear-2x.webp 2x"
                   media="(min-width: 768px)" type="image/webp" />
           <source srcset="img/logo-bear.png 1x, img/logo-bear-2x.png 2x" type="image/png" />
@@ -24,7 +24,7 @@
 <footer class="main-footer">
   <h2>聯絡大會</h2>
   <div class="container">
-    <picture>
+    <picture loading="lazy">
       <source srcset="img/logo-bear-70.webp 1x, img/logo-bear-2x.webp 2x" media="(min-width: 768px)"
               type="image/webp" />
       <source srcset="img/logo-bear.png 1x, img/logo-bear-2x.png 2x" type="image/png" />
@@ -57,9 +57,9 @@
 </footer>
 <a class="backTop scroll-to-top" (click)="scrollToTop()"
    [ngClass]="{ 'show-scroll-top': windowScrolled }">
-  <picture>
+  <picture loading="lazy">
     <source srcset="img/backTotop-24-70.webp" media="(min-width: 768px)" type="image/webp" />
     <source srcset="img/backTotop-24.png" type="image/png" />
-    <img src="img/backTotop-24.png" alt="back to top" />
+    <img src="img/backTotop-24.png" alt="back to top" loading="lazy" />
   </picture>
 </a>
