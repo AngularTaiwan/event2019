@@ -11,9 +11,9 @@ export const AgendaDataSet = {
       isSession: true,
       startTime: '13:00',
       endTime: '14:45',
-      title: 'PWA in Angular',
+      title: 'Angular Testing',
       description:
-        'PWA 是 Progressive Web Apps 的縮寫，對於想要提升使用者體驗、離線瀏覽、訊息推播的功能，使用 PWA 就是你不二的選擇，Google 早期推廣此 Web 技術的主要策動者，目前在各種環境，無論是手機還是瀏覽器，甚至連 Windows Store 對於 PWA 的支援度都大幅的提升，使用 Angular 的開發者很幸運，因為要在 Angular 應用程式中加入 PWA 功能是一件非常簡單的事情。',
+        '測試與開發，這兩者的關係對於開發者來說，可以說是又愛又恨，喜歡測試的好但不喜歡他的麻煩。幸運的是我們在開發 Angular 時，Angular 團隊已經為我們設想了撰寫測試時要有的基本要素，畢竟 Google 是間很注重測試的公司，就讓我們來了解在 Angular 內寫測試是多麼幸福的一件事',
       speaker: 'Kevin Yang'
     },
     {
@@ -26,10 +26,10 @@ export const AgendaDataSet = {
       isSession: true,
       startTime: '15:15',
       endTime: '17:00',
-      title: 'Angular Testing',
+      title: 'Angular Schematics 程式碼產生器實戰',
       description:
-        '測試與開發，這兩者的關係對於開發者來說，可以說是又愛又恨，喜歡測試的好但不喜歡他的麻煩。幸運的是我們在開發 Angular 時，Angular 團隊已經為我們設想了撰寫測試時要有的基本要素，畢竟 Google 是一間很注重測試的公司，就讓我們來了解在 Angular 內寫測試是多麼幸福的一件事',
-      speaker: 'Kevin Yang'
+        'Angular 寫到頭來，有很多重複的 Pattern 會不斷出現，除了你可以進一步元件化之外，有些重複的代碼就是要手動敲一遍才行。本工作坊將帶你從頭認識 Schematics 的架構，不但帶你上手基本開發，還會教你怎樣修改 Angular CLI 內建的 Schematics 工具，讓你在 ng generate component 之後，直接就是你要的元件範本！',
+      speaker: 'Will 保哥'
     },
     {
       isSession: false,
@@ -55,9 +55,9 @@ export const AgendaDataSet = {
       isSession: true,
       startTime: '08:30',
       endTime: '09:30',
-      title: 'TBD',
-      description: '',
-      speaker: 'TBD'
+      title: 'Create Your Own RxJS Operators: How and Why',
+      description: `Here we'll explore what an RxJS operator is, why they are powerful, and how we can create one, from scratch. We'll talk about the reasons why creating operators from scratch can improve your code base. We'll also cover how to test your custom operators.`,
+      speaker: 'Ben Lesh'
     },
     {
       isSession: false,
