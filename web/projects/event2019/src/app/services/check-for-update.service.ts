@@ -1,6 +1,6 @@
 import { Injectable, ApplicationRef, Optional } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
-import { interval, concat, Subject } from 'rxjs';
+import { timer, concat, Subject } from 'rxjs';
 import { first, takeUntil } from 'rxjs/operators';
 
 @Injectable({
@@ -19,12 +19,10 @@ export class CheckForUpdateService {
     const appIsStable$ = this.appRef.isStable.pipe(
       first(isStable => isStable === true)
     );
-    const everySixHours$ = interval(6 * 60 * 60 * 1000);
-    const everySixHoursOnceAppIsStable$ = concat(
-      appIsStable$,
-      everySixHours$
-    ).pipe(takeUntil(this.destory$));
-    everySixHoursOnceAppIsStable$.subscribe(() => {
+    const everySixHours$ = timer(6 * 60 * 60 * 1000);
+
+    const whenAppIsStable$ = appIsStable$.pipe(takeUntil(this.destory$));
+    whenAppIsStable$.subscribe(() => {
       if (this.updates.isEnabled) {
         this.updates.checkForUpdate();
       }
