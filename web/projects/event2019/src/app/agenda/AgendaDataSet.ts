@@ -82,10 +82,10 @@ export const AgendaDataSet = {
       isSession: true,
       startTime: '11:00',
       endTime: '12:00',
-      title: 'The hidden docs of Angular',
+      title: 'Bazel',
       description:
-        '介紹一些有用但是 Angular 文檔上幾乎沒有涉及的 Angular 開發技巧，例如自定義 Angular Input 的 Typescript decorators、增強 ngTemplateOutlet 為 ngStringTemplateOutlet，Directive與Component的特別用法等等',
-      speaker: '謝亞東'
+        'Use Bazel to build your Angular Application - Bazel is an amazing build tool used in all products inside Google, and in the future version of Angular, bazel will also become the default build tool. Bazel is a fast/reliable/extensible build system with a lot of amazing features. In this talk we will introduce the basic concepts of bazel and also provide a demo to talk about how to build/test/bundle Angular application with bazel.',
+      speaker: '李嘉'
     },
     {
       isSession: false,
@@ -97,25 +97,25 @@ export const AgendaDataSet = {
       isSession: true,
       startTime: '13:00',
       endTime: '14:00',
-      title: 'Bazel',
-      description:
-        'Use Bazel to build your Angular Application - Bazel is an amazing build tool used in all products inside Google, and in the future version of Angular, bazel will also become the default build tool. Bazel is a fast/reliable/extensible build system with a lot of amazing features. In this talk we will introduce the basic concepts of bazel and also provide a demo to talk about how to build/test/bundle Angular application with bazel.',
-      speaker: '李嘉'
-    },
-    {
-      isSession: false,
-      startTime: '14:00',
-      endTime: '15:00',
-      title: 'Tea Break 下午茶時間 & Lighting Talk'
-    },
-    {
-      isSession: true,
-      startTime: '15:00',
-      endTime: '16:00',
       title: 'Lighthouse - Performance Tuning',
       description:
         '根據調查當人開一個網站等待時間超過 3 秒鐘時，會有很大的機率會直接離開，要怎麼知道自己的網站效能不錯，當然需要用工具來作評量，Google 的 Lighthouse 就是一個不錯的工具，除了提供檢測外，我們也可以透過檢測項目學習到開發網站的技巧，至於有什麼事情是我們一開始就可以留意的，就讓這議程告訴你',
       speaker: 'Paul Li'
+    },
+    {
+      isSession: true,
+      startTime: '14:00',
+      endTime: '15:00',
+      title: 'The hidden docs of Angular',
+      description:
+        '介紹一些有用但是 Angular 文檔上幾乎沒有涉及的 Angular 開發技巧，例如自定義 Angular Input 的 Typescript decorators、增強 ngTemplateOutlet 為 ngStringTemplateOutlet，Directive與Component的特別用法等等',
+      speaker: '謝亞東'
+    },
+    {
+      isSession: false,
+      startTime: '15:00',
+      endTime: '16:00',
+      title: 'Tea Break 下午茶時間 & Lighting Talk'
     },
     {
       isSession: true,
