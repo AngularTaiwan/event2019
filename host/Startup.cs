@@ -52,18 +52,12 @@ namespace host
 
             FileExtensionContentTypeProvider provider = new FileExtensionContentTypeProvider();
             provider.Mappings[".webmanifest"] = "application/manifest+json";
-            app.UseResponseCaching();
+            //app.UseResponseCaching();
             app.UseSpaStaticFiles(new StaticFileOptions()
             {
-                ContentTypeProvider = provider,
-                OnPrepareResponse = ctx =>
-                {
-                    const double durationInSeconds = 60 * 60 * 24 * 635.25;
-                    ctx.Context.Response.Headers[HeaderNames.CacheControl] =
-                        "public,max-age=" + durationInSeconds;
-                }
+                ContentTypeProvider = provider,                
             });
-            
+
             app.UseSpa(spa =>
             {
                 spa.Options.DefaultPage = "/index.html";
