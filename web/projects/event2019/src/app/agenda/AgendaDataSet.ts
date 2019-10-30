@@ -29,7 +29,7 @@ export const AgendaDataSet = {
       title: 'Angular Schematics 程式碼產生器實戰',
       description:
         'Angular 寫到頭來，有很多重複的 Pattern 會不斷出現，除了你可以進一步元件化之外，有些重複的代碼就是要手動敲一遍才行。本工作坊將帶你從頭認識 Schematics 的架構，不但帶你上手基本開發，還會教你怎樣修改 Angular CLI 內建的 Schematics 工具，讓你在 ng generate component 之後，直接就是你要的元件範本！',
-      speaker: 'Will 保哥 & Mike'
+      speaker: 'Mike'
     },
     {
       isSession: false,
