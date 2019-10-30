@@ -15,25 +15,10 @@ export class CheckForUpdateService {
   ) {}
 
   registe() {
-    // Allow the app to stabilize first, before starting polling for updates with `interval()`.
-    const appIsStable$ = this.appRef.isStable.pipe(
-      first(isStable => isStable === true)
-    );
-    const everySixHours$ = timer(6 * 60 * 60 * 1000);
-
-    const whenAppIsStable$ = appIsStable$.pipe(takeUntil(this.destory$));
-    whenAppIsStable$.subscribe(() => {
-      if (this.updates.isEnabled) {
-        this.updates.checkForUpdate();
+    navigator.serviceWorker.getRegistrations().then(registrations => {
+      for (const registration of registrations) {
+        registration.unregister();
       }
-    });
-
-    this.updateListener();
-  }
-
-  private updateListener() {
-    this.updates.available.subscribe(() => {
-      window.location.reload();
     });
   }
 
