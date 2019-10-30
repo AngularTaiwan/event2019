@@ -29,7 +29,7 @@ export const AgendaDataSet = {
       title: 'Angular Schematics 程式碼產生器實戰',
       description:
         'Angular 寫到頭來，有很多重複的 Pattern 會不斷出現，除了你可以進一步元件化之外，有些重複的代碼就是要手動敲一遍才行。本工作坊將帶你從頭認識 Schematics 的架構，不但帶你上手基本開發，還會教你怎樣修改 Angular CLI 內建的 Schematics 工具，讓你在 ng generate component 之後，直接就是你要的元件範本！',
-      speaker: 'Will 保哥'
+      speaker: 'Will 保哥 & Mike'
     },
     {
       isSession: false,
@@ -55,9 +55,9 @@ export const AgendaDataSet = {
       isSession: true,
       startTime: '08:30',
       endTime: '09:30',
-      title: 'Create Your Own RxJS Operators: How and Why',
-      description: `Here we'll explore what an RxJS operator is, why they are powerful, and how we can create one, from scratch. We'll talk about the reasons why creating operators from scratch can improve your code base. We'll also cover how to test your custom operators.`,
-      speaker: 'Ben Lesh'
+      title: 'TBD',
+      description: `TBD`,
+      speaker: 'TBD'
     },
     {
       isSession: false,
@@ -69,23 +69,17 @@ export const AgendaDataSet = {
       isSession: true,
       startTime: '10:00',
       endTime: '11:00',
-      title: 'Missing Tutorial: Dive into Architecture for Angular ',
-      description: `
-          Even if you learn the basic usage of Angular, developing applications by yourself will be a lot of anxiety. The reason may be that there is not enough learning about the architecture of how to design an entire application.
-
-          Angular application is also a GUI application. Throughout the history of software development, many developers have devised best practices for the architecture of GUI applications. In other words, when thinking about the architecture of Angular applications, it is important to first learn from their history.
-
-          This presentation looks back on the common key principles underlying many architectural patterns, such as MVC, MVP, MVVM, or Clean Architecture. For example, the Single Responsibility Principle or Presentation Domain Separation. Then I'll introduce design patterns that will be a hint for applying those principles to Angular applications and considering an architecture that is highly compatible with the framework.`,
-      speaker: 'Suguru Inatomi '
+      title: 'TBD',
+      description: `TBD`,
+      speaker: 'TBD'
     },
     {
       isSession: true,
       startTime: '11:00',
       endTime: '12:00',
-      title: 'Bazel',
-      description:
-        'Use Bazel to build your Angular Application - Bazel is an amazing build tool used in all products inside Google, and in the future version of Angular, bazel will also become the default build tool. Bazel is a fast/reliable/extensible build system with a lot of amazing features. In this talk we will introduce the basic concepts of bazel and also provide a demo to talk about how to build/test/bundle Angular application with bazel.',
-      speaker: '李嘉'
+      title: 'TBD',
+      description: 'TBD',
+      speaker: 'TBD'
     },
     {
       isSession: false,
