@@ -10,7 +10,7 @@ export const AgendaDataSet = {
     {
       isSession: true,
       startTime: '13:00',
-      endTime: '14:45',
+      endTime: '17:00',
       title: 'Angular Testing',
       description:
         '測試與開發，這兩者的關係對於開發者來說，可以說是又愛又恨，喜歡測試的好但不喜歡他的麻煩。幸運的是我們在開發 Angular 時，Angular 團隊已經為我們設想了撰寫測試時要有的基本要素，畢竟 Google 是間很注重測試的公司，就讓我們來了解在 Angular 內寫測試是多麼幸福的一件事',
@@ -24,7 +24,7 @@ export const AgendaDataSet = {
     },
     {
       isSession: true,
-      startTime: '15:15',
+      startTime: '13:00',
       endTime: '17:00',
       title: 'Angular Schematics 程式碼產生器實戰',
       description:
