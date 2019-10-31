@@ -10,7 +10,7 @@ export const AgendaDataSet = {
     {
       isSession: true,
       startTime: '13:00',
-      endTime: '14:45',
+      endTime: '17:00',
       title: 'Angular Testing',
       description:
         '測試與開發，這兩者的關係對於開發者來說，可以說是又愛又恨，喜歡測試的好但不喜歡他的麻煩。幸運的是我們在開發 Angular 時，Angular 團隊已經為我們設想了撰寫測試時要有的基本要素，畢竟 Google 是間很注重測試的公司，就讓我們來了解在 Angular 內寫測試是多麼幸福的一件事',
@@ -24,11 +24,11 @@ export const AgendaDataSet = {
     },
     {
       isSession: true,
-      startTime: '15:15',
+      startTime: '13:00',
       endTime: '17:00',
       title: 'Angular Schematics 程式碼產生器實戰',
       description:
-        'Angular 寫到頭來，有很多重複的 Pattern 會不斷出現，除了你可以進一步元件化之外，有些重複的代碼就是要手動敲一遍才行。本工作坊將帶你從頭認識 Schematics 的架構，不但帶你上手基本開發，還會教你怎樣修改 Angular CLI 內建的 Schematics 工具，讓你在 ng generate component 之後，直接就是你要的元件範本！',
+        'Angular 寫到頭來，有很多重複的 Pattern 會不斷出現，除了你可以進一步元件化之外，有些重複的代碼就是要手動敲一遍才行。本工作坊將帶你從頭認識 Schematics 的架構，建立自己的程式碼產生器，並整合到 Angular 專案內，讓你輕鬆產生自己的元件範本！',
       speaker: 'Mike'
     },
     {
