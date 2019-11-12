@@ -55,31 +55,24 @@ export const AgendaDataSet = {
       isSession: true,
       startTime: '08:30',
       endTime: '09:30',
-      title: 'TBD',
-      description: `TBD`,
-      speaker: 'TBD'
-    },
-    {
-      isSession: false,
-      startTime: '09:30',
-      endTime: '10:00',
-      title: 'Tea Break 上午茶時間'
+      title: '掌握 21 世紀最重要的資產：學習力',
+      description: `每次看到保哥的場合，都是在分享技術，他不只分享許多文章、影片、直播，每年也有數十場演講與課程，他可以把複雜、抽象的知識，透過清楚明瞭的表達方式讓大家理解。我們很少有機會可以聽到保哥分享他自身的學習方式，到底怎樣才能像保哥一樣可以學會這麼多東西？只要有熱情與時間就夠了嗎？本次講座保哥將分享他獨到的技術養成方法，也會跟大家分享如何培養堅實的學習能力，替未來多變的世界累積不可或缺的知識能量。`,
+      speaker: 'Will 保哥'
     },
     {
       isSession: true,
-      startTime: '10:00',
+      startTime: '09:30',
       endTime: '11:00',
-      title: 'TBD',
-      description: `TBD`,
-      speaker: 'TBD'
+      title: 'Tea Break 上午茶時間 + Open Space 討論',
+      speaker: '與會者'
     },
     {
       isSession: true,
       startTime: '11:00',
       endTime: '12:00',
-      title: 'TBD',
-      description: 'TBD',
-      speaker: 'TBD'
+      title: 'Vue 和 Angular 開發習慣',
+      description: 'Vue 和 Angular 開發習慣',
+      speaker: 'Poy'
     },
     {
       isSession: false,
@@ -91,7 +84,7 @@ export const AgendaDataSet = {
       isSession: true,
       startTime: '13:00',
       endTime: '14:00',
-      title: 'Lighthouse - Performance Tuning',
+      title: 'Whisper of Lighthouse',
       description:
         '根據調查當人開一個網站等待時間超過 3 秒鐘時，會有很大的機率會直接離開，要怎麼知道自己的網站效能不錯，當然需要用工具來作評量，Google 的 Lighthouse 就是一個不錯的工具，除了提供檢測外，我們也可以透過檢測項目學習到開發網站的技巧，至於有什麼事情是我們一開始就可以留意的，就讓這議程告訴你',
       speaker: 'Paul Li'
